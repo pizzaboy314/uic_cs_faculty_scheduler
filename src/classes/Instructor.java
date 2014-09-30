@@ -1,8 +1,10 @@
 package classes;
 
-public class Instructor {
+public class Instructor implements Comparable<Instructor>{
 
 	private String name;
+	private String firstName;
+	private String lastName;
 	private String title;
 	private String background;
 	private String email;
@@ -21,7 +23,11 @@ public class Instructor {
 	}
 
 	public void setName(String name) {
+		String[] split = name.split(" "); 
+		
 		this.name = name;
+		this.firstName = split[0];
+		this.lastName = split[split.length-1];
 	}
 
 	public String getEmail() {
@@ -88,4 +94,32 @@ public class Instructor {
 		this.background = background;
 	}
 
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	@Override
+	public int compareTo(Instructor dude) {
+		
+		if(!this.lastName.equalsIgnoreCase(dude.getLastName())){
+			return this.lastName.compareTo(dude.getLastName());
+		}
+		if(!this.firstName.equalsIgnoreCase(dude.getFirstName())){
+			return this.firstName.compareTo(dude.getFirstName());
+		}
+		return this.degYear - dude.getDegYear();
+	}
 }
