@@ -3,6 +3,8 @@ package classes;
 public class Instructor {
 
 	private String name;
+	private String title;
+	private String background;
 	private String email;
 	private String degName;
 	private int degYear;
@@ -10,8 +12,8 @@ public class Instructor {
 	private int rank2;
 	private int rank3;
 
-	public Instructor(String name) {
-		this.name = name;
+	public Instructor() {
+		
 	}
 
 	public String getName() {
@@ -68,6 +70,22 @@ public class Instructor {
 
 	public void setRank3(int rank3) {
 		this.rank3 = rank3;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getBackground() {
+		return background;
+	}
+
+	public void setBackground(String background) {
+		this.background = background;
 	}
 
 }
