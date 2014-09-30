@@ -35,8 +35,6 @@ public class Main {
 	}
 
 	public static void parseAndInitializeFile() throws IOException {
-		checkDataFile();
-
 		String url = "http://www.cs.uic.edu/Main/Faculty";
 		URL source = null;
 		try {
@@ -92,7 +90,8 @@ public class Main {
 		}
 
 		in.close();
-
+		
+		checkDataFile();
 	}
 
 }

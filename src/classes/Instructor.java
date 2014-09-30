@@ -10,9 +10,9 @@ public class Instructor implements Comparable<Instructor>{
 	private String email;
 	private String degName;
 	private int degYear;
-	private int rank1;
-	private int rank2;
-	private int rank3;
+	private int rank1 = 0;
+	private int rank2 = 0;
+	private int rank3 = 0;
 
 	public Instructor() {
 		
@@ -28,6 +28,21 @@ public class Instructor implements Comparable<Instructor>{
 		this.name = name;
 		this.firstName = split[0];
 		this.lastName = split[split.length-1];
+	}
+	
+	public String fileBlock(){
+		StringBuilder s = new StringBuilder();
+		s.append("name=" + name + ":");
+		s.append("title=" + title + ":");
+		s.append("email=" + email + ":");
+		s.append("degName=" + degName + ":");
+		s.append("degYear=" + degYear + ":");
+		s.append("background=" + background + ":");
+		s.append("rank1=" + rank1 + ":");
+		s.append("rank2=" + rank2 + ":");
+		s.append("rank3=" + rank3);
+		
+		return s.toString();
 	}
 
 	public String getEmail() {
