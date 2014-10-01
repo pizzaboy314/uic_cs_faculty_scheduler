@@ -32,15 +32,15 @@ public class Instructor implements Comparable<Instructor>{
 	
 	public String fileBlock(){
 		StringBuilder s = new StringBuilder();
-		s.append("name=" + name + ":");
-		s.append("title=" + title + ":");
-		s.append("email=" + email + ":");
-		s.append("degName=" + degName + ":");
-		s.append("degYear=" + degYear + ":");
-		s.append("background=" + background + ":");
-		s.append("rank1=" + rank1 + ":");
-		s.append("rank2=" + rank2 + ":");
-		s.append("rank3=" + rank3);
+		s.append("name\t\t" + name + "\n");
+		s.append("title\t\t" + title + "\n");
+		s.append("email\t\t" + email + "\n");
+		s.append("degName\t\t" + degName + "\n");
+		s.append("degYear\t\t" + degYear + "\n");
+		s.append("background\t" + background + "\n");
+		s.append("rank1\t\t" + rank1 + "\n");
+		s.append("rank2\t\t" + rank2 + "\n");
+		s.append("rank3\t\t" + rank3 + "\n\n");
 		
 		return s.toString();
 	}
