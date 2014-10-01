@@ -8,7 +8,10 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -69,11 +72,17 @@ public class Main {
 				String degYear = info[1].substring(info[1].length()-5, info[1].length());
 				String background = info[2].trim();
 				
-				String email = info[3].substring(info[3].indexOf("<a href=\"mailto:"), info[3].indexOf("\">email"));
-				email = email.replaceAll("<a href=\"mailto:", "");
+				String email = null;
+				if (info[3].trim().equals("")) {
+					email = info[4].substring(info[4].indexOf("<a href=\"mailto:"), info[4].indexOf("\">email"));
+					email = email.replaceAll("<a href=\"mailto:", "");
+				} else {
+					email = info[3].substring(info[3].indexOf("<a href=\"mailto:"), info[3].indexOf("\">email"));
+					email = email.replaceAll("<a href=\"mailto:", "");
+				}
 				
 				dude.setDegName(degName);
-				dude.setDegYear(Integer.parseInt(degYear));
+				dude.setDegYear(Integer.parseInt(degYear.trim()));
 				dude.setBackground(background);
 				dude.setEmail(email);
 				
@@ -92,6 +101,13 @@ public class Main {
 		in.close();
 		
 		checkDataFile();
+
+		Collections.sort(list);
+		StringBuilder s = new StringBuilder();
+		for (Instructor dude : list) {
+			s.append(dude.fileBlock() + "\n");
+		}
+		Files.write(Paths.get("data"), s.toString().getBytes());
 	}
 
 }
