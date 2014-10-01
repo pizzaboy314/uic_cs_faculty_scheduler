@@ -15,17 +15,21 @@ import java.util.Collections;
 import java.util.List;
 
 public class Main {
+	
+	public static List<Instructor> list = new ArrayList<Instructor>();
+	public static List<Course> courses = new ArrayList<Course>();
 
 	public static void main(String[] args) {
 		try {
-			parseAndInitializeFile();
+			parseInstructors();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public static void checkDataFile() {
-		File dataFile = new File("data");
+	public static void checkDataFiles() {
+		File dataFile = new File("instructors");
+		File dataFile2 = new File("courses");
 		FileOutputStream oFile;
 		if (!dataFile.exists()) {
 			try {
@@ -35,9 +39,17 @@ public class Main {
 				e.printStackTrace();
 			}
 		}
+		if (!dataFile2.exists()) {
+			try {
+				dataFile2.createNewFile();
+				oFile = new FileOutputStream(dataFile2, false);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
-	public static void parseAndInitializeFile() throws IOException {
+	public static void parseInstructors() throws IOException {
 		String url = "http://www.cs.uic.edu/Main/Faculty";
 		URL source = null;
 		try {
@@ -50,7 +62,7 @@ public class Main {
         uc.addRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");
         uc.connect();
 
-        List<Instructor> list = new ArrayList<Instructor>();
+        
 		BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
 
 		String inputLine = in.readLine();
@@ -99,15 +111,27 @@ public class Main {
 		}
 
 		in.close();
-		
-		checkDataFile();
 
 		Collections.sort(list);
+	}
+	
+	public static void writeInstructors() throws IOException{
+		checkDataFiles();
+		
 		StringBuilder s = new StringBuilder();
 		for (Instructor dude : list) {
 			s.append(dude.fileBlock() + "\n");
 		}
-		Files.write(Paths.get("data"), s.toString().getBytes());
+		Files.write(Paths.get("instructors"), s.toString().getBytes());
+	}
+	public static void writeCourses() throws IOException{
+		checkDataFiles();
+		
+		StringBuilder s = new StringBuilder();
+		for (Course c : courses) {
+			s.append(c.fileBlock() + "\n");
+		}
+		Files.write(Paths.get("courses"), s.toString().getBytes());
 	}
 
 }
