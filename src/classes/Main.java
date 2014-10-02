@@ -22,6 +22,9 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			parseInstructors();
+			parseCourses();
+//			writeInstructors();
+			writeCourses();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -113,6 +116,62 @@ public class Main {
 		in.close();
 
 		Collections.sort(list);
+	}
+	public static void parseCourses() throws IOException {
+		String url = "https://www.uic.edu/ucat/courses/CS.html"; 
+		URL source = null;
+		try {
+			source = new URL(url);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
+		URLConnection uc = source.openConnection();
+		uc.addRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");
+		uc.connect();
+		
+		
+		BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
+		
+		String inputLine = in.readLine();
+		while (inputLine != null) {
+			Course c = new Course();
+			
+			if (inputLine.contains("<p><b>")) {
+				String tmp = inputLine.substring(inputLine.indexOf("<b>"), inputLine.indexOf("</b>"));
+				int number = Integer.parseInt(tmp.replaceAll("<b>", ""));
+				
+				inputLine = in.readLine();
+				String name = inputLine.substring(inputLine.indexOf("<b>"), inputLine.indexOf("</b><br>")).replaceAll("<b>", "");
+				
+				tmp = inputLine.substring(inputLine.indexOf("<br><b>"), inputLine.indexOf(".</b>")).replaceAll("<br><b>", "");
+				int underGradHours, gradHours = 0;
+				if(tmp.contains("OR")){
+					underGradHours = Integer.parseInt(tmp.trim().charAt(0) + "");
+					tmp = tmp.replaceAll("\\d OR ", "");
+					gradHours = Integer.parseInt(tmp.trim().charAt(0) + "");
+				} else {
+					underGradHours = Integer.parseInt(tmp.trim().charAt(0) + "");
+				}
+				
+				c.setNumber(number);
+				c.setName(name);
+				c.setUnderGradHours(underGradHours);
+				c.setGradHours(gradHours);
+				
+				courses.add(c);
+			}
+			
+			if (inputLine.contains("Information provided by the Office of Programs and Academic Assessment.")) {
+				inputLine = null;
+			} else {
+				inputLine = in.readLine();
+			}
+		}
+		
+		in.close();
+		
+		Collections.sort(courses);
 	}
 	
 	public static void writeInstructors() throws IOException{

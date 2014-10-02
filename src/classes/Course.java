@@ -1,10 +1,11 @@
 package classes;
 
-public class Course {
+public class Course implements Comparable<Course>{
 	
 	private String name;
 	private int number;
-	private int hours;
+	private int underGradHours;
+	private int gradHours;
 	
 	public Course(){
 		
@@ -13,8 +14,13 @@ public class Course {
 	public String fileBlock(){
 		StringBuilder s = new StringBuilder();
 		s.append("CS " + number + ": ");
-		s.append("name" + name + "\t\t");
-		s.append("hours: " + hours + "\n");
+		s.append(name + "\n");
+		if(gradHours == 0){
+			s.append("hours: " + underGradHours + "\n");
+		} else {
+			s.append("undergrad hours: " + underGradHours + "\n");
+			s.append("grad hours: " + gradHours + "\n");
+		}
 		
 		return s.toString();
 	}
@@ -35,12 +41,23 @@ public class Course {
 		this.number = number;
 	}
 
-	public int getHours() {
-		return hours;
+	public int getUnderGradHours() {
+		return underGradHours;
 	}
 
-	public void setHours(int hours) {
-		this.hours = hours;
+	public void setUnderGradHours(int underGradHours) {
+		this.underGradHours = underGradHours;
 	}
 
+	public int getGradHours() {
+		return gradHours;
+	}
+
+	public void setGradHours(int gradHours) {
+		this.gradHours = gradHours;
+	}
+	@Override
+	public int compareTo(Course c) {
+		return number - c.getNumber();
+	}
 }
