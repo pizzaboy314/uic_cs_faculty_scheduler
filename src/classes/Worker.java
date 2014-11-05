@@ -39,6 +39,35 @@ public class Worker {
 			System.out.println("To reload manually, use the reload button above...\n");
 			initUpdateCourses = false;
 		}
+		
+		if(initUpdateInstructors){
+			updateInstructors();
+		}
+		if(initUpdateCourses){
+			updateCourses();
+		}
+		
+		//TODO load from file
+	}
+	
+	public static void updateInstructors(){
+		try {
+			parseInstructors();
+			writeInstructors();
+			System.out.println("Finished updating instructor data...");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void updateCourses(){
+		try {
+			parseCourses();
+			writeCourses();
+			System.out.println("Finished updating course data...");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static boolean checkInstructorTSV(){
