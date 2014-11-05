@@ -24,6 +24,16 @@ public class Course implements Comparable<Course>{
 		
 		return s.toString();
 	}
+	
+	public String tsvLine(){
+		StringBuilder s = new StringBuilder();
+		s.append(name + "\t");
+		s.append(number + "\t");
+		s.append(underGradHours + "\t");
+		s.append(gradHours + "\t");
+		
+		return s.toString();
+	}
 
 	public String getName() {
 		return name;

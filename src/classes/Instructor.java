@@ -44,6 +44,21 @@ public class Instructor implements Comparable<Instructor>{
 		
 		return s.toString();
 	}
+	
+	public String tsvLine(){
+		StringBuilder s = new StringBuilder();
+		s.append(name + "\t");
+		s.append(title + "\t");
+		s.append(email + "\t");
+		s.append(degName + "\t");
+		s.append(degYear + "\t");
+		s.append(background + "\t");
+		s.append(rank1 + "\t");
+		s.append(rank2 + "\t");
+		s.append(rank3);
+		
+		return s.toString();
+	}
 
 	public String getEmail() {
 		return email;
