@@ -20,23 +20,6 @@ public class Main {
 		new GUIapp();
 		
 		Worker.init();
-		try {
-			if(Worker.initUpdateInstructors){
-				Worker.parseInstructors();
-				Worker.writeInstructors();
-				System.out.println("Finished updating instructor data");
-			}
-			if(Worker.initUpdateCourses){
-				Worker.parseCourses();
-				Worker.writeCourses();
-				System.out.println("Finished updating course data");
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		//TODO load from file
-		
 	}
 	
 }
