@@ -3,7 +3,6 @@ package classes;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,7 +38,7 @@ public class Worker {
 		} else {
 			System.out.println("Reloading of course data set to FALSE by default...");
 			System.out.println("To reload manually, use the reload button above...\n");
-			//TODO load from file
+			loadCourses();
 		}
 		
 	}
@@ -72,6 +71,7 @@ public class Worker {
 			try {
 				dataFile.createNewFile();
 				oFile = new FileOutputStream(dataFile, false);
+				oFile.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -90,6 +90,7 @@ public class Worker {
 			try {
 				dataFile2.createNewFile();
 				oFile = new FileOutputStream(dataFile2, false);
+				oFile.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -106,6 +107,7 @@ public class Worker {
 			try {
 				dataFile.createNewFile();
 				oFile = new FileOutputStream(dataFile, false);
+				oFile.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -123,6 +125,7 @@ public class Worker {
 			try {
 				dataFile2.createNewFile();
 				oFile = new FileOutputStream(dataFile2, false);
+				oFile.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -156,6 +159,36 @@ public class Worker {
 				
 				instructors.add(dude);
 			}
+			Collections.sort(instructors);
+			
+			br.close();
+			br = null;
+			fis = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	public static void loadCourses(){
+		String line;
+		InputStream fis;
+		BufferedReader br;
+		try {
+			fis = new FileInputStream("courses.tsv");
+			br = new BufferedReader(new InputStreamReader(fis, Charset.forName("UTF-8")));
+			
+			while((line = br.readLine()) != null){
+				Course c = new Course();
+				String[] fields = line.split("\t");
+				
+				c.setName(fields[0]);
+				c.setNumber(Integer.parseInt(fields[1]));
+				c.setUnderGradHours(Integer.parseInt(fields[2]));
+				c.setGradHours(Integer.parseInt(fields[3]));
+				
+				courses.add(c);
+			}
+			Collections.sort(courses);
 			
 			br.close();
 			br = null;
