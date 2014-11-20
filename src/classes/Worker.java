@@ -49,7 +49,7 @@ public class Worker {
 		String[] arr = new String[instructors.size()];
 		int i = 0;
 		for(Instructor dude : instructors){
-			arr[0] = dude.toString();
+			arr[i] = dude.toString();
 			i++;
 		}
 		return arr;
