@@ -28,7 +28,7 @@ public class Worker {
 			updateInstructors();
 		} else {
 			System.out.println("Reloading of instructor data set to FALSE by default...");
-			System.out.println("To reload manually, use the reload button above...\n");
+			System.out.println("To reload manually, use the reload button below...\n");
 			loadInstructors();
 		}
 		
@@ -37,7 +37,7 @@ public class Worker {
 			updateCourses();
 		} else {
 			System.out.println("Reloading of course data set to FALSE by default...");
-			System.out.println("To reload manually, use the reload button above...\n");
+			System.out.println("To reload manually, use the reload button below...\n");
 			loadCourses();
 		}
 		
