@@ -2,12 +2,16 @@ package classes;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -16,43 +20,33 @@ import java.util.List;
 
 public class Worker {
 	
-	public static List<Instructor> list = new ArrayList<Instructor>();
+	public static List<Instructor> instructors = new ArrayList<Instructor>();
 	public static List<Course> courses = new ArrayList<Course>();
-	public static boolean initUpdateInstructors;
-	public static boolean initUpdateCourses;
 	
 	public static void init(){
 		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
 			System.out.println("Missing instructor data files -- will reload instructor data...\n");
-			initUpdateInstructors = true;
+			updateInstructors();
 		} else {
 			System.out.println("Reloading of instructor data set to FALSE by default...");
 			System.out.println("To reload manually, use the reload button above...\n");
-			initUpdateInstructors = false;
+			loadInstructors();
 		}
 		
 		if(checkCourseListFile() == false || checkCourseTSV() == false){
 			System.out.println("Missing course data files -- will reload course data...\n");
-			initUpdateCourses = true;
+			updateCourses();
 		} else {
 			System.out.println("Reloading of course data set to FALSE by default...");
 			System.out.println("To reload manually, use the reload button above...\n");
-			initUpdateCourses = false;
+			//TODO load from file
 		}
 		
-		if(initUpdateInstructors){
-			updateInstructors();
-		}
-		if(initUpdateCourses){
-			updateCourses();
-		}
-		
-		//TODO load from file
 	}
 	
 	public static void updateInstructors(){
 		try {
-			parseInstructors();
+			downloadAndParseInstructors();
 			writeInstructors();
 			System.out.println("Finished updating instructor data...");
 		} catch (IOException e) {
@@ -62,7 +56,7 @@ public class Worker {
 	
 	public static void updateCourses(){
 		try {
-			parseCourses();
+			downloadAndParseCourses();
 			writeCourses();
 			System.out.println("Finished updating course data...");
 		} catch (IOException e) {
@@ -137,8 +131,43 @@ public class Worker {
 			return true;
 		}
 	}
+	
+	public static void loadInstructors(){
+		String line;
+		InputStream fis;
+		BufferedReader br;
+		try {
+			fis = new FileInputStream("instructors.tsv");
+			br = new BufferedReader(new InputStreamReader(fis, Charset.forName("UTF-8")));
+			
+			while((line = br.readLine()) != null){
+				Instructor dude = new Instructor();
+				String[] fields = line.split("\t");
+				
+				dude.setName(fields[0]);
+				dude.setTitle(fields[1]);
+				dude.setEmail(fields[2]);
+				dude.setDegName(fields[3]);
+				dude.setDegYear(Integer.parseInt(fields[4]));
+				dude.setBackground(fields[5]);
+				dude.setRank1(Integer.parseInt(fields[6]));
+				dude.setRank2(Integer.parseInt(fields[7]));
+				dude.setRank3(Integer.parseInt(fields[8]));
+				
+				instructors.add(dude);
+			}
+			
+			br.close();
+			br = null;
+			fis = null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 
-	public static void parseInstructors() throws IOException {
+	public static void downloadAndParseInstructors() throws IOException {
 		String url = "http://www.cs.uic.edu/Main/Faculty";
 		URL source = null;
 		try {
@@ -188,7 +217,7 @@ public class Worker {
 				dude.setBackground(background);
 				dude.setEmail(email);
 				
-				list.add(dude);
+				instructors.add(dude);
 			}
 
 			if (inputLine.contains("Faculty_Awards")) {
@@ -201,9 +230,9 @@ public class Worker {
 		in.close();
 		System.out.println("Finished parsing instructor data...");
 
-		Collections.sort(list);
+		Collections.sort(instructors);
 	}
-	public static void parseCourses() throws IOException {
+	public static void downloadAndParseCourses() throws IOException {
 		String url = "https://www.uic.edu/ucat/courses/CS.html"; 
 		URL source = null;
 		try {
@@ -267,14 +296,13 @@ public class Worker {
 		
 		StringBuilder text = new StringBuilder();
 		StringBuilder tsv = new StringBuilder();
-		for (Instructor dude : list) {
+		for (Instructor dude : instructors) {
 			text.append(dude.fileBlock() + "\n");
 			tsv.append(dude.tsvLine() + "\n");
 		}
 		Files.write(Paths.get("instructorList.txt"), text.toString().getBytes());
 		Files.write(Paths.get("instructors.tsv"), tsv.toString().getBytes());
 		System.out.println("Finished writing instructor data...");
-		initUpdateInstructors = false;
 	}
 	public static void writeCourses() throws IOException{
 		System.out.println("Writing course data...");
@@ -288,7 +316,6 @@ public class Worker {
 		Files.write(Paths.get("courseList.txt"), text.toString().getBytes());
 		Files.write(Paths.get("courses.tsv"), tsv.toString().getBytes());
 		System.out.println("Finished writing course data...");
-		initUpdateCourses = false;
 	}
 
 
