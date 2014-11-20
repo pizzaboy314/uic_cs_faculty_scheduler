@@ -6,6 +6,7 @@ package classes;
 import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 
 public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
@@ -20,28 +21,44 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 	public GUIapp() {
 		// create all components and add them
-		frame = new JFrame("Java Console");
+		frame = new JFrame("UIC CS Faculty Scheduler");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		Dimension frameSize = new Dimension((int) (screenSize.width / 2),
-				(int) (screenSize.height / 2));
+		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
 		int x = (int) (frameSize.width / 2);
 		int y = (int) (frameSize.height / 2);
 		frame.setBounds(x, y, frameSize.width, frameSize.height);
 
 		textArea = new JTextArea();
 		textArea.setEditable(false);
-		JButton button = new JButton("clear console");
+		
+		JButton clearConsole = new JButton("clear console");
+		JButton reloadInstructors = new JButton("Reload Instructors");
+		JButton reloadCourses = new JButton("Reload Courses");
+		
+		JPanel controls = new JPanel();
+        controls.setLayout(new FlowLayout());
+        controls.add(clearConsole, BorderLayout.SOUTH);
+        controls.add(reloadInstructors, BorderLayout.WEST);
+        controls.add(reloadCourses, BorderLayout.EAST);
 
-		frame.getContentPane().setLayout(new BorderLayout());
-		frame.getContentPane().add(new JScrollPane(textArea),
-				BorderLayout.CENTER);
-		frame.getContentPane().add(button, BorderLayout.SOUTH);
+        frame.getContentPane().add(controls, BorderLayout.SOUTH);
+		frame.getContentPane().add(new JScrollPane(textArea), BorderLayout.CENTER);
 		frame.setVisible(true);
-
 		frame.addWindowListener(this);
-		button.addActionListener(new ActionListener() {
+
+		clearConsole.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textArea.setText("");
+			}
+		});
+		reloadInstructors.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Worker.updateInstructors();
+			}
+		});
+		reloadCourses.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Worker.updateCourses();
 			}
 		});
 
