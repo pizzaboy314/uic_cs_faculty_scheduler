@@ -34,6 +34,10 @@ public class Course implements Comparable<Course>{
 		
 		return s.toString();
 	}
+	
+	public String toString(){
+		return "" + number;
+	}
 
 	public String getName() {
 		return name;

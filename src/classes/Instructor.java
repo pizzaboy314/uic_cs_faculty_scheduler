@@ -59,6 +59,10 @@ public class Instructor implements Comparable<Instructor>{
 		
 		return s.toString();
 	}
+	
+	public String toString(){
+		return name;
+	}
 
 	public String getEmail() {
 		return email;
