@@ -1,0 +1,1672 @@
+name		John Bell
+title		Lecturer
+email		jbell@uic.edu
+degName		Ph.D., University of Wisconsin-Madison
+degYear		1990
+background	Virtual reality
+rank1		0
+rank2		0
+rank3		0
+
+
+name		John Bell
+title		Lecturer
+email		jbell@uic.edu
+degName		Ph.D., University of Wisconsin-Madison
+degYear		1990
+background	Virtual reality
+rank1		0
+rank2		0
+rank3		0
+
+
+name		John Bell
+title		Lecturer
+email		jbell@uic.edu
+degName		Ph.D., University of Wisconsin-Madison
+degYear		1990
+background	Virtual reality
+rank1		0
+rank2		0
+rank3		0
+
+
+name		John Bell
+title		Lecturer
+email		jbell@uic.edu
+degName		Ph.D., University of Wisconsin-Madison
+degYear		1990
+background	Virtual reality
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tanya Berger-Wolf
+title		Associate Professor
+email		tanyabw@cs.uic.edu
+degName		Ph.D., University of Illinois at Urbana-Champaign
+degYear		2002
+background	Application of discrete modelling and analysis techniques to various areas of computational biology
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tanya Berger-Wolf
+title		Associate Professor
+email		tanyabw@cs.uic.edu
+degName		Ph.D., University of Illinois at Urbana-Champaign
+degYear		2002
+background	Application of discrete modelling and analysis techniques to various areas of computational biology
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tanya Berger-Wolf
+title		Associate Professor
+email		tanyabw@cs.uic.edu
+degName		Ph.D., University of Illinois at Urbana-Champaign
+degYear		2002
+background	Application of discrete modelling and analysis techniques to various areas of computational biology
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tanya Berger-Wolf
+title		Associate Professor
+email		tanyabw@cs.uic.edu
+degName		Ph.D., University of Illinois at Urbana-Champaign
+degYear		2002
+background	Application of discrete modelling and analysis techniques to various areas of computational biology
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Daniel J. Bernstein
+title		Research Professor
+email		djb@math.uic.edu
+degName		Ph.D., University of California, Berkeley
+degYear		1995
+background	Computational number theory, computational commutative algebra, cryptography, computer security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Daniel J. Bernstein
+title		Research Professor
+email		djb@math.uic.edu
+degName		Ph.D., University of California, Berkeley
+degYear		1995
+background	Computational number theory, computational commutative algebra, cryptography, computer security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Daniel J. Bernstein
+title		Research Professor
+email		djb@math.uic.edu
+degName		Ph.D., University of California, Berkeley
+degYear		1995
+background	Computational number theory, computational commutative algebra, cryptography, computer security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Daniel J. Bernstein
+title		Research Professor
+email		djb@math.uic.edu
+degName		Ph.D., University of California, Berkeley
+degYear		1995
+background	Computational number theory, computational commutative algebra, cryptography, computer security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ugo Buy
+title		Associate Professor
+email		buy@cs.uic.edu
+degName		Ph.D., University of Massachusetts
+degYear		1990
+background	Software engineering, digital government
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ugo Buy
+title		Associate Professor
+email		buy@cs.uic.edu
+degName		Ph.D., University of Massachusetts
+degYear		1990
+background	Software engineering, digital government
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ugo Buy
+title		Associate Professor
+email		buy@cs.uic.edu
+degName		Ph.D., University of Massachusetts
+degYear		1990
+background	Software engineering, digital government
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ugo Buy
+title		Associate Professor
+email		buy@cs.uic.edu
+degName		Ph.D., University of Massachusetts
+degYear		1990
+background	Software engineering, digital government
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Isabel Cruz
+title		Professor
+email		ifc@cs.uic.edu
+degName		Ph.D., University of Toronto,
+degYear		1994
+background	Databases, geographic information systems, semantic web, information visualization, visual languages, graph drawing, multimedia, information retrieval, security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Isabel Cruz
+title		Professor
+email		ifc@cs.uic.edu
+degName		Ph.D., University of Toronto,
+degYear		1994
+background	Databases, geographic information systems, semantic web, information visualization, visual languages, graph drawing, multimedia, information retrieval, security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Isabel Cruz
+title		Professor
+email		ifc@cs.uic.edu
+degName		Ph.D., University of Toronto,
+degYear		1994
+background	Databases, geographic information systems, semantic web, information visualization, visual languages, graph drawing, multimedia, information retrieval, security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Isabel Cruz
+title		Professor
+email		ifc@cs.uic.edu
+degName		Ph.D., University of Toronto,
+degYear		1994
+background	Databases, geographic information systems, semantic web, information visualization, visual languages, graph drawing, multimedia, information retrieval, security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Bhaskar  DasGupta
+title		Associate Professor
+email		dasgupta@cs.uic.edu
+degName		Ph.D., University of Minnesota, Minneapolis
+degYear		1995
+background	Bioinformatics, computational biology, neural networks, machine learning, optical networks, combinatorial algorithms
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Bhaskar  DasGupta
+title		Associate Professor
+email		dasgupta@cs.uic.edu
+degName		Ph.D., University of Minnesota, Minneapolis
+degYear		1995
+background	Bioinformatics, computational biology, neural networks, machine learning, optical networks, combinatorial algorithms
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Bhaskar  DasGupta
+title		Associate Professor
+email		dasgupta@cs.uic.edu
+degName		Ph.D., University of Minnesota, Minneapolis
+degYear		1995
+background	Bioinformatics, computational biology, neural networks, machine learning, optical networks, combinatorial algorithms
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Bhaskar  DasGupta
+title		Associate Professor
+email		dasgupta@cs.uic.edu
+degName		Ph.D., University of Minnesota, Minneapolis
+degYear		1995
+background	Bioinformatics, computational biology, neural networks, machine learning, optical networks, combinatorial algorithms
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tom  DeFanti
+title		Distinguished Professor Emeritus
+email		tom@uic.edu
+degName		Ph.D., Ohio State University
+degYear		1973
+background	Virtual reality, computer networks, computer graphics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tom  DeFanti
+title		Distinguished Professor Emeritus
+email		tom@uic.edu
+degName		Ph.D., Ohio State University
+degYear		1973
+background	Virtual reality, computer networks, computer graphics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tom  DeFanti
+title		Distinguished Professor Emeritus
+email		tom@uic.edu
+degName		Ph.D., Ohio State University
+degYear		1973
+background	Virtual reality, computer networks, computer graphics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tom  DeFanti
+title		Distinguished Professor Emeritus
+email		tom@uic.edu
+degName		Ph.D., Ohio State University
+degYear		1973
+background	Virtual reality, computer networks, computer graphics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jakob Eriksson
+title		Assistant Professor
+email		jakob@uic.edu
+degName		Ph.D., University of California, Riverside
+degYear		2006
+background	participatory sensing, wireless and sensor networks, computational transportation science, operating system and language support for concurrent programs
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jakob Eriksson
+title		Assistant Professor
+email		jakob@uic.edu
+degName		Ph.D., University of California, Riverside
+degYear		2006
+background	participatory sensing, wireless and sensor networks, computational transportation science, operating system and language support for concurrent programs
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jakob Eriksson
+title		Assistant Professor
+email		jakob@uic.edu
+degName		Ph.D., University of California, Riverside
+degYear		2006
+background	participatory sensing, wireless and sensor networks, computational transportation science, operating system and language support for concurrent programs
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jakob Eriksson
+title		Assistant Professor
+email		jakob@uic.edu
+degName		Ph.D., University of California, Riverside
+degYear		2006
+background	participatory sensing, wireless and sensor networks, computational transportation science, operating system and language support for concurrent programs
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Barbara Di Eugenio
+title		Professor, Acting Director of Graduate Studies
+email		bdieugen@cs.uic.edu
+degName		Ph.D., University of Pennsylvania
+degYear		1993
+background	Natural language processing, intelligent agents, collaborative and tutoring systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Barbara Di Eugenio
+title		Professor, Acting Director of Graduate Studies
+email		bdieugen@cs.uic.edu
+degName		Ph.D., University of Pennsylvania
+degYear		1993
+background	Natural language processing, intelligent agents, collaborative and tutoring systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Barbara Di Eugenio
+title		Professor, Acting Director of Graduate Studies
+email		bdieugen@cs.uic.edu
+degName		Ph.D., University of Pennsylvania
+degYear		1993
+background	Natural language processing, intelligent agents, collaborative and tutoring systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Barbara Di Eugenio
+title		Professor, Acting Director of Graduate Studies
+email		bdieugen@cs.uic.edu
+degName		Ph.D., University of Pennsylvania
+degYear		1993
+background	Natural language processing, intelligent agents, collaborative and tutoring systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Angus Forbes
+title		Assistant Professor
+email		aforbes@uic.edu
+degName		Ph.D., University of California, Santa Barbara
+degYear		2014
+background	Information visualization, human-computer interaction, computer graphics, computational aesthetics, creative coding
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Angus Forbes
+title		Assistant Professor
+email		aforbes@uic.edu
+degName		Ph.D., University of California, Santa Barbara
+degYear		2014
+background	Information visualization, human-computer interaction, computer graphics, computational aesthetics, creative coding
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Angus Forbes
+title		Assistant Professor
+email		aforbes@uic.edu
+degName		Ph.D., University of California, Santa Barbara
+degYear		2014
+background	Information visualization, human-computer interaction, computer graphics, computational aesthetics, creative coding
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Angus Forbes
+title		Assistant Professor
+email		aforbes@uic.edu
+degName		Ph.D., University of California, Santa Barbara
+degYear		2014
+background	Information visualization, human-computer interaction, computer graphics, computational aesthetics, creative coding
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Piotr Gmytrasiewicz
+title		Associate Professor
+email		piotr@cs.uic.edu
+degName		Ph.D., University of Michigan, Ann Arbor
+degYear		1992
+background	Artificial intelligence, multi-agent systems, intelligent agents, knowledge representation, uncertainty reasoning, automated decision-making, decision and game theories, intelligent coordination and communication, cognitive modeling
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Piotr Gmytrasiewicz
+title		Associate Professor
+email		piotr@cs.uic.edu
+degName		Ph.D., University of Michigan, Ann Arbor
+degYear		1992
+background	Artificial intelligence, multi-agent systems, intelligent agents, knowledge representation, uncertainty reasoning, automated decision-making, decision and game theories, intelligent coordination and communication, cognitive modeling
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Piotr Gmytrasiewicz
+title		Associate Professor
+email		piotr@cs.uic.edu
+degName		Ph.D., University of Michigan, Ann Arbor
+degYear		1992
+background	Artificial intelligence, multi-agent systems, intelligent agents, knowledge representation, uncertainty reasoning, automated decision-making, decision and game theories, intelligent coordination and communication, cognitive modeling
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Piotr Gmytrasiewicz
+title		Associate Professor
+email		piotr@cs.uic.edu
+degName		Ph.D., University of Michigan, Ann Arbor
+degYear		1992
+background	Artificial intelligence, multi-agent systems, intelligent agents, knowledge representation, uncertainty reasoning, automated decision-making, decision and game theories, intelligent coordination and communication, cognitive modeling
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Mark Grechanik
+title		Assistant Professor
+email		drmark@cs.uic.edu
+degName		Ph.D., The University of Texas at Austin
+degYear		2006
+background	Software engineering; software testing, verification and validation; software reuse; software evolution, and maintenance; data privacy in software engineering
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Mark Grechanik
+title		Assistant Professor
+email		drmark@cs.uic.edu
+degName		Ph.D., The University of Texas at Austin
+degYear		2006
+background	Software engineering; software testing, verification and validation; software reuse; software evolution, and maintenance; data privacy in software engineering
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Mark Grechanik
+title		Assistant Professor
+email		drmark@cs.uic.edu
+degName		Ph.D., The University of Texas at Austin
+degYear		2006
+background	Software engineering; software testing, verification and validation; software reuse; software evolution, and maintenance; data privacy in software engineering
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Mark Grechanik
+title		Assistant Professor
+email		drmark@cs.uic.edu
+degName		Ph.D., The University of Texas at Austin
+degYear		2006
+background	Software engineering; software testing, verification and validation; software reuse; software evolution, and maintenance; data privacy in software engineering
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Joe Hummel
+title		Research Associate Professor
+email		jhummel2@uic.edu
+degName		Ph.D., University of California, Irvine
+degYear		1998
+background	parallelism, high performance computing, compilers, programming languages
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Joe Hummel
+title		Research Associate Professor
+email		jhummel2@uic.edu
+degName		Ph.D., University of California, Irvine
+degYear		1998
+background	parallelism, high performance computing, compilers, programming languages
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Joe Hummel
+title		Research Associate Professor
+email		jhummel2@uic.edu
+degName		Ph.D., University of California, Irvine
+degYear		1998
+background	parallelism, high performance computing, compilers, programming languages
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Joe Hummel
+title		Research Associate Professor
+email		jhummel2@uic.edu
+degName		Ph.D., University of California, Irvine
+degYear		1998
+background	parallelism, high performance computing, compilers, programming languages
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Andrew Johnson
+title		Associate Professor, Director of Research/EVL
+email		ajohnson@uic.edu
+degName		Ph.D., Wayne State University
+degYear		1994
+background	Computer graphics, collaborative environments, visualization, virtual reality, learning environments, user interfaces, visual analytics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Andrew Johnson
+title		Associate Professor, Director of Research/EVL
+email		ajohnson@uic.edu
+degName		Ph.D., Wayne State University
+degYear		1994
+background	Computer graphics, collaborative environments, visualization, virtual reality, learning environments, user interfaces, visual analytics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Andrew Johnson
+title		Associate Professor, Director of Research/EVL
+email		ajohnson@uic.edu
+degName		Ph.D., Wayne State University
+degYear		1994
+background	Computer graphics, collaborative environments, visualization, virtual reality, learning environments, user interfaces, visual analytics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Andrew Johnson
+title		Associate Professor, Director of Research/EVL
+email		ajohnson@uic.edu
+degName		Ph.D., Wayne State University
+degYear		1994
+background	Computer graphics, collaborative environments, visualization, virtual reality, learning environments, user interfaces, visual analytics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Chris Kanich
+title		Assistant Professor
+email		ckanich@cs.uic.edu
+degName		Ph.D., University of California, San Diego
+degYear		2012
+background	Economics of cybercrime, Internet measurement, Human factors in security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Chris Kanich
+title		Assistant Professor
+email		ckanich@cs.uic.edu
+degName		Ph.D., University of California, San Diego
+degYear		2012
+background	Economics of cybercrime, Internet measurement, Human factors in security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Chris Kanich
+title		Assistant Professor
+email		ckanich@cs.uic.edu
+degName		Ph.D., University of California, San Diego
+degYear		2012
+background	Economics of cybercrime, Internet measurement, Human factors in security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Chris Kanich
+title		Assistant Professor
+email		ckanich@cs.uic.edu
+degName		Ph.D., University of California, San Diego
+degYear		2012
+background	Economics of cybercrime, Internet measurement, Human factors in security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Robert Kenyon
+title		Professor
+email		kenyon@uic.edu
+degName		Ph.D., University of California, Berkeley
+degYear		1978
+background	Human-Computer interaction, computer graphics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Robert Kenyon
+title		Professor
+email		kenyon@uic.edu
+degName		Ph.D., University of California, Berkeley
+degYear		1978
+background	Human-Computer interaction, computer graphics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Robert Kenyon
+title		Professor
+email		kenyon@uic.edu
+degName		Ph.D., University of California, Berkeley
+degYear		1978
+background	Human-Computer interaction, computer graphics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Robert Kenyon
+title		Professor
+email		kenyon@uic.edu
+degName		Ph.D., University of California, Berkeley
+degYear		1978
+background	Human-Computer interaction, computer graphics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ajay Kshemkalyani
+title		Professor
+email		ajayk@cs.uic.edu
+degName		Ph.D., Ohio State University
+degYear		1991
+background	Distributed computing, computer networks, sensor networks, mobile ad-hoc networks, concurrent systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ajay Kshemkalyani
+title		Professor
+email		ajayk@cs.uic.edu
+degName		Ph.D., Ohio State University
+degYear		1991
+background	Distributed computing, computer networks, sensor networks, mobile ad-hoc networks, concurrent systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ajay Kshemkalyani
+title		Professor
+email		ajayk@cs.uic.edu
+degName		Ph.D., Ohio State University
+degYear		1991
+background	Distributed computing, computer networks, sensor networks, mobile ad-hoc networks, concurrent systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ajay Kshemkalyani
+title		Professor
+email		ajayk@cs.uic.edu
+degName		Ph.D., Ohio State University
+degYear		1991
+background	Distributed computing, computer networks, sensor networks, mobile ad-hoc networks, concurrent systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jason Leigh
+title		Professor
+email		spiff@uic.edu
+degName		Ph.D., University of Illinois at Chicago
+degYear		1998
+background	Amplified collaboration environments, advanced networking, realtime computer Graphics, virtual Reality, video game design and development
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jason Leigh
+title		Professor
+email		spiff@uic.edu
+degName		Ph.D., University of Illinois at Chicago
+degYear		1998
+background	Amplified collaboration environments, advanced networking, realtime computer Graphics, virtual Reality, video game design and development
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jason Leigh
+title		Professor
+email		spiff@uic.edu
+degName		Ph.D., University of Illinois at Chicago
+degYear		1998
+background	Amplified collaboration environments, advanced networking, realtime computer Graphics, virtual Reality, video game design and development
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jason Leigh
+title		Professor
+email		spiff@uic.edu
+degName		Ph.D., University of Illinois at Chicago
+degYear		1998
+background	Amplified collaboration environments, advanced networking, realtime computer Graphics, virtual Reality, video game design and development
+rank1		0
+rank2		0
+rank3		0
+
+
+name		John Lillis
+title		Associate Professor, Director of Undergraduate Studies
+email		jlillis@cs.uic.edu
+degName		Ph.D., University of California, San Diego
+degYear		1996
+background	CAD for VLSI, combinatorial optimization
+rank1		0
+rank2		0
+rank3		0
+
+
+name		John Lillis
+title		Associate Professor, Director of Undergraduate Studies
+email		jlillis@cs.uic.edu
+degName		Ph.D., University of California, San Diego
+degYear		1996
+background	CAD for VLSI, combinatorial optimization
+rank1		0
+rank2		0
+rank3		0
+
+
+name		John Lillis
+title		Associate Professor, Director of Undergraduate Studies
+email		jlillis@cs.uic.edu
+degName		Ph.D., University of California, San Diego
+degYear		1996
+background	CAD for VLSI, combinatorial optimization
+rank1		0
+rank2		0
+rank3		0
+
+
+name		John Lillis
+title		Associate Professor, Director of Undergraduate Studies
+email		jlillis@cs.uic.edu
+degName		Ph.D., University of California, San Diego
+degYear		1996
+background	CAD for VLSI, combinatorial optimization
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Bing Liu
+title		Professor
+email		liub@cs.uic.edu
+degName		Ph.D., University of Edinburgh
+degYear		1989
+background	Data mining and knowledge discovery, Web and text mining, Bioinformatics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Bing Liu
+title		Professor
+email		liub@cs.uic.edu
+degName		Ph.D., University of Edinburgh
+degYear		1989
+background	Data mining and knowledge discovery, Web and text mining, Bioinformatics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Bing Liu
+title		Professor
+email		liub@cs.uic.edu
+degName		Ph.D., University of Edinburgh
+degYear		1989
+background	Data mining and knowledge discovery, Web and text mining, Bioinformatics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Bing Liu
+title		Professor
+email		liub@cs.uic.edu
+degName		Ph.D., University of Edinburgh
+degYear		1989
+background	Data mining and knowledge discovery, Web and text mining, Bioinformatics
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Leilah Lyons
+title		Assistant Professor
+email		llyons@uic.edu
+degName		Ph.D., University of Michigan, Ann Arbor
+degYear		2008
+background	Human-Computer Interaction (HCI), Computer-Supported Collaborative Learning (CSCL), Interactive Museum Exhibit Design
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Leilah Lyons
+title		Assistant Professor
+email		llyons@uic.edu
+degName		Ph.D., University of Michigan, Ann Arbor
+degYear		2008
+background	Human-Computer Interaction (HCI), Computer-Supported Collaborative Learning (CSCL), Interactive Museum Exhibit Design
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Leilah Lyons
+title		Assistant Professor
+email		llyons@uic.edu
+degName		Ph.D., University of Michigan, Ann Arbor
+degYear		2008
+background	Human-Computer Interaction (HCI), Computer-Supported Collaborative Learning (CSCL), Interactive Museum Exhibit Design
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Leilah Lyons
+title		Assistant Professor
+email		llyons@uic.edu
+degName		Ph.D., University of Michigan, Ann Arbor
+degYear		2008
+background	Human-Computer Interaction (HCI), Computer-Supported Collaborative Learning (CSCL), Interactive Museum Exhibit Design
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tom Moher
+title		Associate Professor Emeritus
+email		moher@uic.edu
+degName		Ph.D., University of Minnesota, Minneapolis
+degYear		1983
+background	Learning Environments, human-computer interaction
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tom Moher
+title		Associate Professor Emeritus
+email		moher@uic.edu
+degName		Ph.D., University of Minnesota, Minneapolis
+degYear		1983
+background	Learning Environments, human-computer interaction
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tom Moher
+title		Associate Professor Emeritus
+email		moher@uic.edu
+degName		Ph.D., University of Minnesota, Minneapolis
+degYear		1983
+background	Learning Environments, human-computer interaction
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tom Moher
+title		Associate Professor Emeritus
+email		moher@uic.edu
+degName		Ph.D., University of Minnesota, Minneapolis
+degYear		1983
+background	Learning Environments, human-computer interaction
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tadao Murata
+title		Distinguished Professor Emeritus
+email		murata@cs.uic.edu
+degName		Ph.D., University of Illinois at Urbana-Champaign
+degYear		1966
+background	Petri nets, design, modeling, and analysis of concurrent systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tadao Murata
+title		Distinguished Professor Emeritus
+email		murata@cs.uic.edu
+degName		Ph.D., University of Illinois at Urbana-Champaign
+degYear		1966
+background	Petri nets, design, modeling, and analysis of concurrent systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tadao Murata
+title		Distinguished Professor Emeritus
+email		murata@cs.uic.edu
+degName		Ph.D., University of Illinois at Urbana-Champaign
+degYear		1966
+background	Petri nets, design, modeling, and analysis of concurrent systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Tadao Murata
+title		Distinguished Professor Emeritus
+email		murata@cs.uic.edu
+degName		Ph.D., University of Illinois at Urbana-Champaign
+degYear		1966
+background	Petri nets, design, modeling, and analysis of concurrent systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Peter Nelson
+title		Dean
+email		nelson@uic.edu
+degName		Ph.D., Northwestern University
+degYear		1988
+background	Artificial intelligence, intelligent transportation systems,manufacturing optimization, high-availability clustering, heuristic search
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Peter Nelson
+title		Dean
+email		nelson@uic.edu
+degName		Ph.D., Northwestern University
+degYear		1988
+background	Artificial intelligence, intelligent transportation systems,manufacturing optimization, high-availability clustering, heuristic search
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Peter Nelson
+title		Dean
+email		nelson@uic.edu
+degName		Ph.D., Northwestern University
+degYear		1988
+background	Artificial intelligence, intelligent transportation systems,manufacturing optimization, high-availability clustering, heuristic search
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Peter Nelson
+title		Dean
+email		nelson@uic.edu
+degName		Ph.D., Northwestern University
+degYear		1988
+background	Artificial intelligence, intelligent transportation systems,manufacturing optimization, high-availability clustering, heuristic search
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Dale Reed
+title		Clinical Professor and Director of Undergraduate Recruitment
+email		reed@cs.uic.edu
+degName		Ph.D., Northwestern University
+degYear		1995
+background	Uses of technology in education, artificial intelligence
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Dale Reed
+title		Clinical Professor and Director of Undergraduate Recruitment
+email		reed@cs.uic.edu
+degName		Ph.D., Northwestern University
+degYear		1995
+background	Uses of technology in education, artificial intelligence
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Dale Reed
+title		Clinical Professor and Director of Undergraduate Recruitment
+email		reed@cs.uic.edu
+degName		Ph.D., Northwestern University
+degYear		1995
+background	Uses of technology in education, artificial intelligence
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Dale Reed
+title		Clinical Professor and Director of Undergraduate Recruitment
+email		reed@cs.uic.edu
+degName		Ph.D., Northwestern University
+degYear		1995
+background	Uses of technology in education, artificial intelligence
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Luc Renambot
+title		Associate Research Professor
+email		luc@evl.uic.edu
+degName		Ph.D., Universit? de Rennes,
+degYear		2000
+background	Tele-immersion, visualization, advanced networking
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Luc Renambot
+title		Associate Research Professor
+email		luc@evl.uic.edu
+degName		Ph.D., Universit? de Rennes,
+degYear		2000
+background	Tele-immersion, visualization, advanced networking
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Luc Renambot
+title		Associate Research Professor
+email		luc@evl.uic.edu
+degName		Ph.D., Universit? de Rennes,
+degYear		2000
+background	Tele-immersion, visualization, advanced networking
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Luc Renambot
+title		Associate Research Professor
+email		luc@evl.uic.edu
+degName		Ph.D., Université de Rennes,
+degYear		2000
+background	Tele-immersion, visualization, advanced networking
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Sol Shatz
+title		Professor Emeritus
+email		shatz@uic.edu
+degName		Ph.D., Northwestern University
+degYear		1983
+background	Software engineering, distributed computing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Sol Shatz
+title		Professor Emeritus
+email		shatz@uic.edu
+degName		Ph.D., Northwestern University
+degYear		1983
+background	Software engineering, distributed computing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Sol Shatz
+title		Professor Emeritus
+email		shatz@uic.edu
+degName		Ph.D., Northwestern University
+degYear		1983
+background	Software engineering, distributed computing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Sol Shatz
+title		Professor Emeritus
+email		shatz@uic.edu
+degName		Ph.D., Northwestern University
+degYear		1983
+background	Software engineering, distributed computing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Prasad Sistla
+title		Professor
+email		sistla@cs.uic.edu
+degName		Ph.D., Harvard University
+degYear		1983
+background	Formal methods in concurrent and distributed systems, semantics and verification of concurrent programs, database management systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Prasad Sistla
+title		Professor
+email		sistla@cs.uic.edu
+degName		Ph.D., Harvard University
+degYear		1983
+background	Formal methods in concurrent and distributed systems, semantics and verification of concurrent programs, database management systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Prasad Sistla
+title		Professor
+email		sistla@cs.uic.edu
+degName		Ph.D., Harvard University
+degYear		1983
+background	Formal methods in concurrent and distributed systems, semantics and verification of concurrent programs, database management systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Prasad Sistla
+title		Professor
+email		sistla@cs.uic.edu
+degName		Ph.D., Harvard University
+degYear		1983
+background	Formal methods in concurrent and distributed systems, semantics and verification of concurrent programs, database management systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Robert Sloan
+title		Professor and Department Head
+email		sloan@uic.edu
+degName		Ph.D., Massachusetts Institute of Technology
+degYear		1989
+background	Algorithms and complexity theory, especially applied to artificial intelligence problems, security, computer science education
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Robert Sloan
+title		Professor and Department Head
+email		sloan@uic.edu
+degName		Ph.D., Massachusetts Institute of Technology
+degYear		1989
+background	Algorithms and complexity theory, especially applied to artificial intelligence problems, security, computer science education
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Robert Sloan
+title		Professor and Department Head
+email		sloan@uic.edu
+degName		Ph.D., Massachusetts Institute of Technology
+degYear		1989
+background	Algorithms and complexity theory, especially applied to artificial intelligence problems, security, computer science education
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Robert Sloan
+title		Professor and Department Head
+email		sloan@uic.edu
+degName		Ph.D., Massachusetts Institute of Technology
+degYear		1989
+background	Algorithms and complexity theory, especially applied to artificial intelligence problems, security, computer science education
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jon Solworth
+title		Associate Professor
+email		solworth@cs.uic.edu
+degName		Ph.D., New York University
+degYear		1987
+background	Computer Systems Security, Networking, Operating Systems, and Distributed Systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jon Solworth
+title		Associate Professor
+email		solworth@cs.uic.edu
+degName		Ph.D., New York University
+degYear		1987
+background	Computer Systems Security, Networking, Operating Systems, and Distributed Systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jon Solworth
+title		Associate Professor
+email		solworth@cs.uic.edu
+degName		Ph.D., New York University
+degYear		1987
+background	Computer Systems Security, Networking, Operating Systems, and Distributed Systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Jon Solworth
+title		Associate Professor
+email		solworth@cs.uic.edu
+degName		Ph.D., New York University
+degYear		1987
+background	Computer Systems Security, Networking, Operating Systems, and Distributed Systems
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Mitchell Theys
+title		Clinical Associate Professor
+email		mtheys@uic.edu
+degName		Ph.D., Purdue University
+degYear		1999
+background	Heterogeneous computing, GPGPU programming, Parallel Processing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Mitchell Theys
+title		Clinical Associate Professor
+email		mtheys@uic.edu
+degName		Ph.D., Purdue University
+degYear		1999
+background	Heterogeneous computing, GPGPU programming, Parallel Processing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Mitchell Theys
+title		Clinical Associate Professor
+email		mtheys@uic.edu
+degName		Ph.D., Purdue University
+degYear		1999
+background	Heterogeneous computing, GPGPU programming, Parallel Processing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Mitchell Theys
+title		Clinical Associate Professor
+email		mtheys@uic.edu
+degName		Ph.D., Purdue University
+degYear		1999
+background	Heterogeneous computing, GPGPU programming, Parallel Processing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Patrick Troy
+title		Clinical Associate Professor
+email		troy@cs.uic.edu
+degName		M.S., Pennsylvania State University
+degYear		1990
+background	Computer science education
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Patrick Troy
+title		Clinical Associate Professor
+email		troy@cs.uic.edu
+degName		M.S., Pennsylvania State University
+degYear		1990
+background	Computer science education
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Patrick Troy
+title		Clinical Associate Professor
+email		troy@cs.uic.edu
+degName		M.S., Pennsylvania State University
+degYear		1990
+background	Computer science education
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Patrick Troy
+title		Clinical Associate Professor
+email		troy@cs.uic.edu
+degName		M.S., Pennsylvania State University
+degYear		1990
+background	Computer science education
+rank1		0
+rank2		0
+rank3		0
+
+
+name		V. N. Venkatakrishnan
+title		Associate Professor
+email		venkat@cs.uic.edu
+degName		Ph.D., Stony Brook University
+degYear		2004
+background	Computer security, network security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		V. N. Venkatakrishnan
+title		Associate Professor
+email		venkat@cs.uic.edu
+degName		Ph.D., Stony Brook University
+degYear		2004
+background	Computer security, network security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		V. N. Venkatakrishnan
+title		Associate Professor
+email		venkat@cs.uic.edu
+degName		Ph.D., Stony Brook University
+degYear		2004
+background	Computer security, network security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		V. N. Venkatakrishnan
+title		Associate Professor
+email		venkat@cs.uic.edu
+degName		Ph.D., Stony Brook University
+degYear		2004
+background	Computer security, network security
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ouri Wolfson
+title		Richard and Loan Hill Professor
+email		wolfson@cs.uic.edu
+degName		Ph.D., New York University
+degYear		1984
+background	Database systems, distributed systems, transaction processing, mobile computing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ouri Wolfson
+title		Richard and Loan Hill Professor
+email		wolfson@cs.uic.edu
+degName		Ph.D., New York University
+degYear		1984
+background	Database systems, distributed systems, transaction processing, mobile computing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ouri Wolfson
+title		Richard and Loan Hill Professor
+email		wolfson@cs.uic.edu
+degName		Ph.D., New York University
+degYear		1984
+background	Database systems, distributed systems, transaction processing, mobile computing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Ouri Wolfson
+title		Richard and Loan Hill Professor
+email		wolfson@cs.uic.edu
+degName		Ph.D., New York University
+degYear		1984
+background	Database systems, distributed systems, transaction processing, mobile computing
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Clement Yu
+title		Professor Emeritus
+email		yu@cs.uic.edu
+degName		Ph.D., Cornell University
+degYear		1973
+background	Database management, information retrieval and knowledge base management, multimedia retrieval
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Clement Yu
+title		Professor Emeritus
+email		yu@cs.uic.edu
+degName		Ph.D., Cornell University
+degYear		1973
+background	Database management, information retrieval and knowledge base management, multimedia retrieval
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Clement Yu
+title		Professor Emeritus
+email		yu@cs.uic.edu
+degName		Ph.D., Cornell University
+degYear		1973
+background	Database management, information retrieval and knowledge base management, multimedia retrieval
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Clement Yu
+title		Professor Emeritus
+email		yu@cs.uic.edu
+degName		Ph.D., Cornell University
+degYear		1973
+background	Database management, information retrieval and knowledge base management, multimedia retrieval
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Philip S. Yu
+title		Distinguished Professor and Wexler Chair in Information Technology
+email		psyu@cs.uic.edu
+degName		Ph.D., Stanford University
+degYear		1978
+background	Data mining, database, social networks and web
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Philip S. Yu
+title		Distinguished Professor and Wexler Chair in Information Technology
+email		psyu@cs.uic.edu
+degName		Ph.D., Stanford University
+degYear		1978
+background	Data mining, database, social networks and web
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Philip S. Yu
+title		Distinguished Professor and Wexler Chair in Information Technology
+email		psyu@cs.uic.edu
+degName		Ph.D., Stanford University
+degYear		1978
+background	Data mining, database, social networks and web
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Philip S. Yu
+title		Distinguished Professor and Wexler Chair in Information Technology
+email		psyu@cs.uic.edu
+degName		Ph.D., Stanford University
+degYear		1978
+background	Data mining, database, social networks and web
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Brian Ziebart
+title		Assistant Professor
+email		bziebart@uic.edu
+degName		Ph.D., Carnegie Mellon University
+degYear		2010
+background	Statistical machine learning, robotics, artificial intelligence, assistive technologies
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Brian Ziebart
+title		Assistant Professor
+email		bziebart@uic.edu
+degName		Ph.D., Carnegie Mellon University
+degYear		2010
+background	Statistical machine learning, robotics, artificial intelligence, assistive technologies
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Brian Ziebart
+title		Assistant Professor
+email		bziebart@uic.edu
+degName		Ph.D., Carnegie Mellon University
+degYear		2010
+background	Statistical machine learning, robotics, artificial intelligence, assistive technologies
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Brian Ziebart
+title		Assistant Professor
+email		bziebart@uic.edu
+degName		Ph.D., Carnegie Mellon University
+degYear		2010
+background	Statistical machine learning, robotics, artificial intelligence, assistive technologies
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Lenore Zuck
+title		Associate Professor
+email		lenore@cs.uic.edu
+degName		Ph.D., Weizmann Institute of Science
+degYear		1987
+background	Theorem proving, formal methods, translation validation, formal analysis of security protocols
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Lenore Zuck
+title		Associate Professor
+email		lenore@cs.uic.edu
+degName		Ph.D., Weizmann Institute of Science
+degYear		1987
+background	Theorem proving, formal methods, translation validation, formal analysis of security protocols
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Lenore Zuck
+title		Associate Professor
+email		lenore@cs.uic.edu
+degName		Ph.D., Weizmann Institute of Science
+degYear		1987
+background	Theorem proving, formal methods, translation validation, formal analysis of security protocols
+rank1		0
+rank2		0
+rank3		0
+
+
+name		Lenore Zuck
+title		Associate Professor
+email		lenore@cs.uic.edu
+degName		Ph.D., Weizmann Institute of Science
+degYear		1987
+background	Theorem proving, formal methods, translation validation, formal analysis of security protocols
+rank1		0
+rank2		0
+rank3		0
+
+
