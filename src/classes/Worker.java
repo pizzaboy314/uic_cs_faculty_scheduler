@@ -19,10 +19,12 @@ import java.util.List;
 
 public class Worker {
 	
-	public static List<Instructor> instructors = new ArrayList<Instructor>();
-	public static List<Course> courses = new ArrayList<Course>();
+	public static List<Instructor> instructors;
+	public static List<Course> courses;
 	
 	public static void init(){
+		instructors = new ArrayList<Instructor>();
+		courses = new ArrayList<Course>();
 		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
 			System.out.println("Missing instructor data files -- will reload instructor data...\n");
 			updateInstructors();
@@ -41,6 +43,16 @@ public class Worker {
 			loadCourses();
 		}
 		
+	}
+	
+	public static String[] instructorsToArray(){
+		String[] arr = new String[instructors.size()];
+		int i = 0;
+		for(Instructor dude : instructors){
+			arr[0] = dude.toString();
+			i++;
+		}
+		return arr;
 	}
 	
 	public static void updateInstructors(){
@@ -201,6 +213,8 @@ public class Worker {
 	
 
 	public static void downloadAndParseInstructors() throws IOException {
+		instructors = new ArrayList<Instructor>();
+		
 		String url = "http://www.cs.uic.edu/Main/Faculty";
 		URL source = null;
 		try {
@@ -266,6 +280,8 @@ public class Worker {
 		Collections.sort(instructors);
 	}
 	public static void downloadAndParseCourses() throws IOException {
+		courses = new ArrayList<Course>();
+		
 		String url = "https://www.uic.edu/ucat/courses/CS.html"; 
 		URL source = null;
 		try {
