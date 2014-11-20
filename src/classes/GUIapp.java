@@ -19,6 +19,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	private final PipedInputStream pin = new PipedInputStream();
 	private final PipedInputStream pin2 = new PipedInputStream();
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public GUIapp() {
 		// create all components and add them
 		frame = new JFrame("UIC CS Faculty Scheduler");
@@ -37,30 +38,36 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		
 		JPanel controls = new JPanel();
         controls.setLayout(new FlowLayout());
-        controls.add(clearConsole, BorderLayout.SOUTH);
-        controls.add(reloadInstructors, BorderLayout.WEST);
-        controls.add(reloadCourses, BorderLayout.EAST);
+        controls.add(clearConsole);
+        controls.add(reloadInstructors);
+        controls.add(reloadCourses);
+        
+        JPanel dropdowns = new JPanel();
+        dropdowns.setLayout(new FlowLayout());
+        
+        clearConsole.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		textArea.setText("");
+        	}
+        });
+        reloadInstructors.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		Worker.updateInstructors();
+        		frame.repaint();
+        	}
+        });
+        reloadCourses.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		Worker.updateCourses();
+        		frame.repaint();
+        	}
+        });
 
-        frame.getContentPane().add(controls, BorderLayout.SOUTH);
 		frame.getContentPane().add(new JScrollPane(textArea), BorderLayout.CENTER);
+		frame.getContentPane().add(dropdowns, BorderLayout.NORTH);
+		frame.getContentPane().add(controls, BorderLayout.SOUTH);
 		frame.setVisible(true);
 		frame.addWindowListener(this);
-
-		clearConsole.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				textArea.setText("");
-			}
-		});
-		reloadInstructors.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Worker.updateInstructors();
-			}
-		});
-		reloadCourses.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Worker.updateCourses();
-			}
-		});
 
 		try {
 			PipedOutputStream pout = new PipedOutputStream(this.pin);
@@ -95,6 +102,14 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		reader2 = new Thread(this);
 		reader2.setDaemon(true);
 		reader2.start();
+		
+		Worker.init();
+		
+		String[] arr = Worker.instructorsToArray();
+		JComboBox instructor = new JComboBox(arr);
+		instructor.setSelectedIndex(0);
+		dropdowns.add(instructor);
+		frame.repaint();
 
 	}
 
