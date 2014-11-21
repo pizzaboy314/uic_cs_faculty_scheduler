@@ -10,9 +10,9 @@ public class Instructor implements Comparable<Instructor>{
 	private String email;
 	private String degName;
 	private int degYear;
-	private int rank1 = 0;
-	private int rank2 = 0;
-	private int rank3 = 0;
+	private int rank1 = 100;
+	private int rank2 = 100;
+	private int rank3 = 100;
 
 	public Instructor() {
 		
