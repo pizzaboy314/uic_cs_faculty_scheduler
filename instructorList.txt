@@ -4,9 +4,9 @@ email		jbell@uic.edu
 degName		Ph.D., University of Wisconsin-Madison
 degYear		1990
 background	Virtual reality
-rank1		100
-rank2		100
-rank3		100
+rank1		111
+rank2		201
+rank3		398
 
 
 name		Tanya Berger-Wolf
@@ -276,7 +276,7 @@ rank3		100
 name		Luc Renambot
 title		Associate Research Professor
 email		luc@evl.uic.edu
-degName		Ph.D., Université de Rennes,
+degName		Ph.D., Universit? de Rennes,
 degYear		2000
 background	Tele-immersion, visualization, advanced networking
 rank1		100
