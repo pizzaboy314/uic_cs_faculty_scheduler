@@ -35,23 +35,33 @@ public class Worker {
 		currRank3 = "";
 		
 		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
-			System.out.println("Missing instructor data files -- will reload instructor data...\n");
 			updateInstructors();
 		} else {
-			System.out.println("Reloading of instructor data set to FALSE by default...");
-			System.out.println("To reload manually, use the reload button below...\n");
 			loadInstructors();
 		}
 		
 		if(checkCourseListFile() == false || checkCourseTSV() == false){
-			System.out.println("Missing course data files -- will reload course data...\n");
 			updateCourses();
 		} else {
-			System.out.println("Reloading of course data set to FALSE by default...");
-			System.out.println("To reload manually, use the reload button below...\n");
 			loadCourses();
 		}
 		
+	}
+	
+	public static void initPrint(){
+		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
+			System.out.println("Missing instructor data files -- will reload instructor data...\n");
+		} else {
+			System.out.println("Reloading of instructor data set to FALSE by default...");
+			System.out.println("To reload manually, use the reload button below...\n");
+		}
+		
+		if(checkCourseListFile() == false || checkCourseTSV() == false){
+			System.out.println("Missing course data files -- will reload course data...\n");
+		} else {
+			System.out.println("Reloading of course data set to FALSE by default...");
+			System.out.println("To reload manually, use the reload button below...\n");
+		}
 	}
 	
 	public static String[] instructorsToArray(){
@@ -263,7 +273,7 @@ public class Worker {
 
         
 		BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
-		System.out.println("Parsing instructor data...");
+		System.out.println("Parsing instructor data from web page...");
 
 		String inputLine = in.readLine();
 		while (inputLine != null) {
@@ -309,7 +319,7 @@ public class Worker {
 		}
 
 		in.close();
-		System.out.println("Finished parsing instructor data...");
+		System.out.println("Finished parsing instructor data from web page...");
 
 		Collections.sort(instructors);
 	}
@@ -330,7 +340,7 @@ public class Worker {
 		
 		
 		BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
-		System.out.println("Parsing course data...");
+		System.out.println("Parsing course data from web page...");
 		
 		String inputLine = in.readLine();
 		while (inputLine != null) {
@@ -369,13 +379,13 @@ public class Worker {
 		}
 		
 		in.close();
-		System.out.println("Finished parsing course data...");
+		System.out.println("Finished parsing course data from web page...");
 		
 		Collections.sort(courses);
 	}
 	
 	public static void writeInstructors() throws IOException{
-		System.out.println("Writing instructor data...");
+		System.out.println("Writing instructor data to file...");
 		
 		StringBuilder text = new StringBuilder();
 		StringBuilder tsv = new StringBuilder();
@@ -385,10 +395,10 @@ public class Worker {
 		}
 		Files.write(Paths.get("instructorList.txt"), text.toString().getBytes());
 		Files.write(Paths.get("instructors.tsv"), tsv.toString().getBytes());
-		System.out.println("Finished writing instructor data..."); //TODO to file
+		System.out.println("Finished writing instructor data to file..."); //TODO to file
 	}
 	public static void writeCourses() throws IOException{
-		System.out.println("Writing course data...");
+		System.out.println("Writing course data to file...");
 		
 		StringBuilder text = new StringBuilder();
 		StringBuilder tsv = new StringBuilder();
@@ -398,7 +408,7 @@ public class Worker {
 		}
 		Files.write(Paths.get("courseList.txt"), text.toString().getBytes());
 		Files.write(Paths.get("courses.tsv"), tsv.toString().getBytes());
-		System.out.println("Finished writing course data...");
+		System.out.println("Finished writing course data to file...");
 	}
 
 	public static int[] setCurrName(String currName) {

@@ -21,7 +21,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public GUIapp() {
-		Worker.init(); //TODO separate println in init from file loading
+		Worker.init(); 
 		
 		// create all components and add them
 		frame = new JFrame("UIC CS Faculty Scheduler");
@@ -165,6 +165,8 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 			textArea.append("Couldn't redirect STDERR to this console\n"
 					+ se.getMessage());
 		}
+		
+		Worker.initPrint();
 
 		quit = false; // signals the Threads that they should exit
 
