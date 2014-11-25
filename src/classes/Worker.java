@@ -21,10 +21,19 @@ public class Worker {
 	
 	public static List<Instructor> instructors;
 	public static List<Course> courses;
+	public static String currName;
+	public static String currRank1;
+	public static String currRank2;
+	public static String currRank3;
 	
 	public static void init(){
 		instructors = new ArrayList<Instructor>();
 		courses = new ArrayList<Course>();
+		currName = "";
+		currRank1 = "";
+		currRank2 = "";
+		currRank3 = "";
+		
 		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
 			System.out.println("Missing instructor data files -- will reload instructor data...\n");
 			updateInstructors();
@@ -53,6 +62,31 @@ public class Worker {
 			i++;
 		}
 		return arr;
+	}
+	
+	public static String[] coursesToArray(){
+		String[] arr = new String[courses.size()];
+		int i = 0;
+		for(Course c : courses){
+			arr[i] = c.toString();
+			i++;
+		}
+		return arr;
+	}
+	
+	public static void saveInfo(){
+		for(Instructor dude : instructors){
+			if(dude.getName().equals(currName)){
+				dude.setRank1(Integer.parseInt(currRank1));
+				dude.setRank2(Integer.parseInt(currRank2));
+				dude.setRank3(Integer.parseInt(currRank3));
+			}
+		}
+		try {
+			writeInstructors();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static void updateInstructors(){
@@ -351,7 +385,7 @@ public class Worker {
 		}
 		Files.write(Paths.get("instructorList.txt"), text.toString().getBytes());
 		Files.write(Paths.get("instructors.tsv"), tsv.toString().getBytes());
-		System.out.println("Finished writing instructor data...");
+		System.out.println("Finished writing instructor data..."); //TODO to file
 	}
 	public static void writeCourses() throws IOException{
 		System.out.println("Writing course data...");
@@ -365,6 +399,48 @@ public class Worker {
 		Files.write(Paths.get("courseList.txt"), text.toString().getBytes());
 		Files.write(Paths.get("courses.tsv"), tsv.toString().getBytes());
 		System.out.println("Finished writing course data...");
+	}
+
+	public static int[] setCurrName(String currName) {
+		Worker.currName = currName;
+		
+		int[] indexes = new int[3];
+		for(Instructor dude : instructors){
+			if(dude.getName().equals(currName)){
+				currRank1 = dude.getRank1() + "";
+				currRank2 = dude.getRank2() + "";
+				currRank3 = dude.getRank3() + "";
+				
+				String[] arr = coursesToArray();
+				for(int i=0; i<arr.length; i++){
+					if(arr[i].equals(currRank1)){
+						indexes[0] = i;
+					}
+					if(arr[i].equals(currRank2)){
+						indexes[1] = i;
+					}
+					if(arr[i].equals(currRank3)){
+						indexes[2] = i;
+					}
+				}
+				
+			}
+		}
+		
+		
+		return indexes;
+	}
+
+	public static void setCurrRank1(String currRank1) {
+		Worker.currRank1 = currRank1;
+	}
+
+	public static void setCurrRank2(String currRank2) {
+		Worker.currRank2 = currRank2;
+	}
+
+	public static void setCurrRank3(String currRank3) {
+		Worker.currRank3 = currRank3;
 	}
 
 
