@@ -5,7 +5,7 @@ degName		Ph.D., University of Wisconsin-Madison
 degYear		1990
 background	Virtual reality
 rank1		111
-rank2		201
+rank2		202
 rank3		398
 
 
