@@ -59,6 +59,7 @@ public class Worker {
 	}
 	
 	public static void initPrint(){
+		System.out.println("Use this tool to edit the courses each instructor teaches...\n");
 		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
 			System.out.println("Missing instructor data files -- will reload instructor data...\n");
 		} else {
