@@ -1,4 +1,4 @@
-package classes;
+package data;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -97,14 +97,14 @@ public class Worker {
 	public static void saveInfo(){
 		for(Instructor dude : instructors){
 			if(dude.getName().equals(currName)){
-				dude.setCourse1(Integer.parseInt(currCourse1));
-				dude.setCourse2(Integer.parseInt(currCourse2));
-				dude.setCourse3(Integer.parseInt(currCourse3));
-				dude.setCourse4(Integer.parseInt(currCourse4));
-				dude.setCourse5(Integer.parseInt(currCourse5));
-				dude.setCourse6(Integer.parseInt(currCourse6));
-				dude.setCourse7(Integer.parseInt(currCourse7));
-				dude.setCourse8(Integer.parseInt(currCourse8));
+				dude.setCourse1((!currCourse1.equals("n/a")) ? Integer.parseInt(currCourse1) : 99);
+				dude.setCourse2((!currCourse2.equals("n/a")) ? Integer.parseInt(currCourse2) : 99);
+				dude.setCourse3((!currCourse3.equals("n/a")) ? Integer.parseInt(currCourse3) : 99);
+				dude.setCourse4((!currCourse4.equals("n/a")) ? Integer.parseInt(currCourse4) : 99);
+				dude.setCourse5((!currCourse5.equals("n/a")) ? Integer.parseInt(currCourse5) : 99);
+				dude.setCourse6((!currCourse6.equals("n/a")) ? Integer.parseInt(currCourse6) : 99);
+				dude.setCourse7((!currCourse7.equals("n/a")) ? Integer.parseInt(currCourse7) : 99);
+				dude.setCourse8((!currCourse8.equals("n/a")) ? Integer.parseInt(currCourse8) : 99);
 			}
 		}
 		try {

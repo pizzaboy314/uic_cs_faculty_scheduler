@@ -1,7 +1,7 @@
 // Taken from: http://www.comweb.nl/java/Console/Console.html
 // Adapted for use with this application by Bryan Spahr
 
-package classes;
+package data;
 
 import java.io.*;
 import java.awt.*;

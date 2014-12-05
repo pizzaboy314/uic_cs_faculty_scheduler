@@ -1,4 +1,4 @@
-package classes;
+package data;
 
 public class Course implements Comparable<Course>{
 	
