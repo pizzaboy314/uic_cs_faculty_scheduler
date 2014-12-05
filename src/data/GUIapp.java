@@ -24,7 +24,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		Worker.init(); 
 		
 		// create all components and add them
-		frame = new JFrame("UIC CS Faculty Scheduler");
+		frame = new JFrame("UIC CS Faculty Editor");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
 		int x = (int) (frameSize.width / 2);
