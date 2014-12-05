@@ -166,6 +166,11 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		course1.setSelectedIndex(indexes[0]);
 		course2.setSelectedIndex(indexes[1]);
 		course3.setSelectedIndex(indexes[2]);
+		course4.setSelectedIndex(indexes[3]);
+		course5.setSelectedIndex(indexes[4]);
+		course6.setSelectedIndex(indexes[5]);
+		course7.setSelectedIndex(indexes[6]);
+		course8.setSelectedIndex(indexes[7]);
 		instructors.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -174,6 +179,11 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 				course1.setSelectedIndex(indexes[0]);
 				course2.setSelectedIndex(indexes[1]);
 				course3.setSelectedIndex(indexes[2]);
+				course4.setSelectedIndex(indexes[3]);
+				course5.setSelectedIndex(indexes[4]);
+				course6.setSelectedIndex(indexes[5]);
+				course7.setSelectedIndex(indexes[6]);
+				course8.setSelectedIndex(indexes[7]);
 			}
 		});
 		
