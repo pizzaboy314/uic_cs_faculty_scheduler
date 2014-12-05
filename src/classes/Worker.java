@@ -362,9 +362,16 @@ public class Worker {
 		BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()));
 		System.out.println("Parsing course data from web page...");
 		
+		Course c = new Course();
+		c.setNumber(99);
+		c.setName("n/a");
+		c.setUnderGradHours(0);
+		c.setGradHours(0);
+		courses.add(c);
+		
 		String inputLine = in.readLine();
 		while (inputLine != null) {
-			Course c = new Course();
+			c = new Course();
 			
 			if (inputLine.contains("<p><b>")) {
 				String tmp = inputLine.substring(inputLine.indexOf("<b>"), inputLine.indexOf("</b>"));

@@ -10,14 +10,14 @@ public class Instructor implements Comparable<Instructor>{
 	private String email;
 	private String degName;
 	private int degYear;
-	private int course1 = 100;
-	private int course2 = 100;
-	private int course3 = 100;
-	private int course4 = 100;
-	private int course5 = 100;
-	private int course6 = 100;
-	private int course7 = 100;
-	private int course8 = 100;
+	private int course1 = 99;
+	private int course2 = 99;
+	private int course3 = 99;
+	private int course4 = 99;
+	private int course5 = 99;
+	private int course6 = 99;
+	private int course7 = 99;
+	private int course8 = 99;
 
 	public Instructor() {
 		

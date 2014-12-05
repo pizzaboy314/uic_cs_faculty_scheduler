@@ -36,7 +36,11 @@ public class Course implements Comparable<Course>{
 	}
 	
 	public String toString(){
-		return "" + number;
+		if(number > 99){
+			return "" + number;
+		} else {
+			return name;
+		}
 	}
 
 	public String getName() {
