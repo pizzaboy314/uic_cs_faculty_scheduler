@@ -1,3 +1,6 @@
+CS 99: n/a
+hours: 0
+
 CS 100: Discovering Computer Science
 hours: 3
 
