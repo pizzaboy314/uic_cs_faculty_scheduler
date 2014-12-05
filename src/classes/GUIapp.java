@@ -44,8 +44,13 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
         controls.add(reloadInstructors);
         controls.add(reloadCourses);
         
+        JPanel dropdowns1 = new JPanel();
+        dropdowns1.setLayout(new FlowLayout());
+        JPanel dropdowns2 = new JPanel();
+        dropdowns2.setLayout(new FlowLayout());
         JPanel dropdowns = new JPanel();
-        dropdowns.setLayout(new FlowLayout());
+        dropdowns.setLayout(new BorderLayout());
+//        dropdowns.setBounds(0, 0, frameSize.width, 100);
         
         clearConsole.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
@@ -66,36 +71,91 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
         	}
         });
         
-		final JComboBox rank1 = new JComboBox(Worker.coursesToArray());
-		rank1.setSelectedIndex(0);
-		Worker.setCurrRank1((String)rank1.getSelectedItem());
-		rank1.addActionListener(new ActionListener() {
+		final JComboBox course1 = new JComboBox(Worker.coursesToArray());
+		course1.setSelectedIndex(0);
+		Worker.setCurrCourse1((String)course1.getSelectedItem());
+		course1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				String num = (String)rank1.getSelectedItem();
-				Worker.setCurrRank1(num);
+				String num = (String)course1.getSelectedItem();
+				Worker.setCurrCourse1(num);
 			}
 		});
 		
-		final JComboBox rank2 = new JComboBox(Worker.coursesToArray());
-		rank2.setSelectedIndex(0);
-		Worker.setCurrRank2((String)rank2.getSelectedItem());
-		rank2.addActionListener(new ActionListener() {
+		final JComboBox course2 = new JComboBox(Worker.coursesToArray());
+		course2.setSelectedIndex(0);
+		Worker.setCurrCourse2((String)course2.getSelectedItem());
+		course2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				String num = (String)rank2.getSelectedItem();
-				Worker.setCurrRank2(num);
+				String num = (String)course2.getSelectedItem();
+				Worker.setCurrCourse2(num);
 			}
 		});
 		
-		final JComboBox rank3 = new JComboBox(Worker.coursesToArray());
-		rank3.setSelectedIndex(0);
-		Worker.setCurrRank3((String)rank3.getSelectedItem());
-		rank3.addActionListener(new ActionListener() {
+		final JComboBox course3 = new JComboBox(Worker.coursesToArray());
+		course3.setSelectedIndex(0);
+		Worker.setCurrCourse3((String)course3.getSelectedItem());
+		course3.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				String num = (String)rank3.getSelectedItem();
-				Worker.setCurrRank3(num);
+				String num = (String)course3.getSelectedItem();
+				Worker.setCurrCourse3(num);
+			}
+		});
+		
+		final JComboBox course4 = new JComboBox(Worker.coursesToArray());
+		course4.setSelectedIndex(0);
+		Worker.setCurrCourse4((String)course4.getSelectedItem());
+		course4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String num = (String)course4.getSelectedItem();
+				Worker.setCurrCourse4(num);
+			}
+		});
+		
+		final JComboBox course5 = new JComboBox(Worker.coursesToArray());
+		course5.setSelectedIndex(0);
+		Worker.setCurrCourse5((String)course5.getSelectedItem());
+		course5.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String num = (String)course5.getSelectedItem();
+				Worker.setCurrCourse5(num);
+			}
+		});
+		
+		final JComboBox course6 = new JComboBox(Worker.coursesToArray());
+		course6.setSelectedIndex(0);
+		Worker.setCurrCourse6((String)course6.getSelectedItem());
+		course6.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String num = (String)course6.getSelectedItem();
+				Worker.setCurrCourse6(num);
+			}
+		});
+		
+		final JComboBox course7 = new JComboBox(Worker.coursesToArray());
+		course7.setSelectedIndex(0);
+		Worker.setCurrCourse7((String)course7.getSelectedItem());
+		course7.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String num = (String)course7.getSelectedItem();
+				Worker.setCurrCourse7(num);
+			}
+		});
+		
+		final JComboBox course8 = new JComboBox(Worker.coursesToArray());
+		course8.setSelectedIndex(0);
+		Worker.setCurrCourse8((String)course8.getSelectedItem());
+		course8.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String num = (String)course8.getSelectedItem();
+				Worker.setCurrCourse8(num);
 			}
 		});
 		
@@ -103,17 +163,17 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		instructors.setSelectedIndex(0);
 		String name = (String)instructors.getSelectedItem();
 		int[] indexes = Worker.setCurrName(name);
-		rank1.setSelectedIndex(indexes[0]);
-		rank2.setSelectedIndex(indexes[1]);
-		rank3.setSelectedIndex(indexes[2]);
+		course1.setSelectedIndex(indexes[0]);
+		course2.setSelectedIndex(indexes[1]);
+		course3.setSelectedIndex(indexes[2]);
 		instructors.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				String name = (String)instructors.getSelectedItem();
 				int[] indexes = Worker.setCurrName(name);
-				rank1.setSelectedIndex(indexes[0]);
-				rank2.setSelectedIndex(indexes[1]);
-				rank3.setSelectedIndex(indexes[2]);
+				course1.setSelectedIndex(indexes[0]);
+				course2.setSelectedIndex(indexes[1]);
+				course3.setSelectedIndex(indexes[2]);
 			}
 		});
 		
@@ -125,15 +185,31 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 			}
 		});
 		
-		dropdowns.add(new JLabel("Instructor"));
-		dropdowns.add(instructors);
-		dropdowns.add(new JLabel("1st Pick"));
-		dropdowns.add(rank1);
-		dropdowns.add(new JLabel("2nd Pick"));
-		dropdowns.add(rank2);
-		dropdowns.add(new JLabel("3rd Pick"));
-		dropdowns.add(rank3);
-		dropdowns.add(save);
+		dropdowns1.add(new JLabel("Instructor"));
+		dropdowns1.add(instructors);
+		dropdowns1.add(new JLabel("Class 1"));
+		dropdowns1.add(course1);
+		dropdowns1.add(new JLabel("Class 2"));
+		dropdowns1.add(course2);
+		dropdowns1.add(new JLabel("Class 3"));
+		dropdowns1.add(course3);
+		dropdowns1.add(save);
+		
+		dropdowns2.add(new JLabel("Class 4"));
+		dropdowns2.add(course4);
+		dropdowns2.add(new JLabel("Class 5"));
+		dropdowns2.add(course5);
+		dropdowns2.add(new JLabel("Class 6"));
+		dropdowns2.add(course6);
+		dropdowns2.add(new JLabel("Class 7"));
+		dropdowns2.add(course7);
+		dropdowns2.add(new JLabel("Class 8"));
+		dropdowns2.add(course8);
+		
+		dropdowns.add(dropdowns1, BorderLayout.NORTH);
+		dropdowns.add(dropdowns2, BorderLayout.SOUTH);
+		
+		
 		frame.repaint();
 		frame.repaint();
 		frame.repaint();

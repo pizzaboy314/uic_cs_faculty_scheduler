@@ -10,9 +10,14 @@ public class Instructor implements Comparable<Instructor>{
 	private String email;
 	private String degName;
 	private int degYear;
-	private int rank1 = 100;
-	private int rank2 = 100;
-	private int rank3 = 100;
+	private int course1 = 100;
+	private int course2 = 100;
+	private int course3 = 100;
+	private int course4 = 100;
+	private int course5 = 100;
+	private int course6 = 100;
+	private int course7 = 100;
+	private int course8 = 100;
 
 	public Instructor() {
 		
@@ -38,9 +43,14 @@ public class Instructor implements Comparable<Instructor>{
 		s.append("degName\t\t" + degName + "\n");
 		s.append("degYear\t\t" + degYear + "\n");
 		s.append("background\t" + background + "\n");
-		s.append("rank1\t\t" + rank1 + "\n");
-		s.append("rank2\t\t" + rank2 + "\n");
-		s.append("rank3\t\t" + rank3 + "\n\n");
+		s.append("course1\t\t" + course1 + "\n");
+		s.append("course2\t\t" + course2 + "\n");
+		s.append("course3\t\t" + course3 + "\n");
+		s.append("course4\t\t" + course4 + "\n");
+		s.append("course5\t\t" + course5 + "\n");
+		s.append("course6\t\t" + course6 + "\n");
+		s.append("course7\t\t" + course7 + "\n");
+		s.append("course8\t\t" + course8 + "\n\n");
 		
 		return s.toString();
 	}
@@ -53,9 +63,14 @@ public class Instructor implements Comparable<Instructor>{
 		s.append(degName + "\t");
 		s.append(degYear + "\t");
 		s.append(background + "\t");
-		s.append(rank1 + "\t");
-		s.append(rank2 + "\t");
-		s.append(rank3);
+		s.append(course1 + "\t");
+		s.append(course2 + "\t");
+		s.append(course3 + "\t");
+		s.append(course4 + "\t");
+		s.append(course5 + "\t");
+		s.append(course6 + "\t");
+		s.append(course7 + "\t");
+		s.append(course8);
 		
 		return s.toString();
 	}
@@ -86,30 +101,6 @@ public class Instructor implements Comparable<Instructor>{
 
 	public void setDegYear(int degYear) {
 		this.degYear = degYear;
-	}
-
-	public int getRank1() {
-		return rank1;
-	}
-
-	public void setRank1(int rank1) {
-		this.rank1 = rank1;
-	}
-
-	public int getRank2() {
-		return rank2;
-	}
-
-	public void setRank2(int rank2) {
-		this.rank2 = rank2;
-	}
-
-	public int getRank3() {
-		return rank3;
-	}
-
-	public void setRank3(int rank3) {
-		this.rank3 = rank3;
 	}
 
 	public String getTitle() {
@@ -145,6 +136,70 @@ public class Instructor implements Comparable<Instructor>{
 		this.lastName = lastName;
 	}
 
+	public int getCourse1() {
+		return course1;
+	}
+
+	public void setCourse1(int course1) {
+		this.course1 = course1;
+	}
+
+	public int getCourse2() {
+		return course2;
+	}
+
+	public void setCourse2(int course2) {
+		this.course2 = course2;
+	}
+
+	public int getCourse3() {
+		return course3;
+	}
+
+	public void setCourse3(int course3) {
+		this.course3 = course3;
+	}
+
+	public int getCourse4() {
+		return course4;
+	}
+
+	public void setCourse4(int course4) {
+		this.course4 = course4;
+	}
+
+	public int getCourse5() {
+		return course5;
+	}
+
+	public void setCourse5(int course5) {
+		this.course5 = course5;
+	}
+
+	public int getCourse6() {
+		return course6;
+	}
+
+	public void setCourse6(int course6) {
+		this.course6 = course6;
+	}
+
+	public int getCourse7() {
+		return course7;
+	}
+
+	public void setCourse7(int course7) {
+		this.course7 = course7;
+	}
+
+	public int getCourse8() {
+		return course8;
+	}
+
+	public void setCourse8(int course8) {
+		this.course8 = course8;
+	}
+	
 	@Override
 	public int compareTo(Instructor dude) {
 		

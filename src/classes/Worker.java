@@ -22,17 +22,27 @@ public class Worker {
 	public static List<Instructor> instructors;
 	public static List<Course> courses;
 	public static String currName;
-	public static String currRank1;
-	public static String currRank2;
-	public static String currRank3;
+	public static String currCourse1;
+	public static String currCourse2;
+	public static String currCourse3;
+	public static String currCourse4;
+	public static String currCourse5;
+	public static String currCourse6;
+	public static String currCourse7;
+	public static String currCourse8;
 	
 	public static void init(){
 		instructors = new ArrayList<Instructor>();
 		courses = new ArrayList<Course>();
 		currName = "";
-		currRank1 = "";
-		currRank2 = "";
-		currRank3 = "";
+		currCourse1 = "";
+		currCourse2 = "";
+		currCourse3 = "";
+		currCourse4 = "";
+		currCourse5 = "";
+		currCourse6 = "";
+		currCourse7 = "";
+		currCourse8 = "";
 		
 		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
 			updateInstructors();
@@ -87,9 +97,14 @@ public class Worker {
 	public static void saveInfo(){
 		for(Instructor dude : instructors){
 			if(dude.getName().equals(currName)){
-				dude.setRank1(Integer.parseInt(currRank1));
-				dude.setRank2(Integer.parseInt(currRank2));
-				dude.setRank3(Integer.parseInt(currRank3));
+				dude.setCourse1(Integer.parseInt(currCourse1));
+				dude.setCourse2(Integer.parseInt(currCourse2));
+				dude.setCourse3(Integer.parseInt(currCourse3));
+				dude.setCourse4(Integer.parseInt(currCourse4));
+				dude.setCourse5(Integer.parseInt(currCourse5));
+				dude.setCourse6(Integer.parseInt(currCourse6));
+				dude.setCourse7(Integer.parseInt(currCourse7));
+				dude.setCourse8(Integer.parseInt(currCourse8));
 			}
 		}
 		try {
@@ -209,9 +224,14 @@ public class Worker {
 				dude.setDegName(fields[3]);
 				dude.setDegYear(Integer.parseInt(fields[4]));
 				dude.setBackground(fields[5]);
-				dude.setRank1(Integer.parseInt(fields[6]));
-				dude.setRank2(Integer.parseInt(fields[7]));
-				dude.setRank3(Integer.parseInt(fields[8]));
+				dude.setCourse1(Integer.parseInt(fields[6]));
+				dude.setCourse2(Integer.parseInt(fields[7]));
+				dude.setCourse3(Integer.parseInt(fields[8]));
+				dude.setCourse4(Integer.parseInt(fields[9]));
+				dude.setCourse5(Integer.parseInt(fields[10]));
+				dude.setCourse6(Integer.parseInt(fields[11]));
+				dude.setCourse7(Integer.parseInt(fields[12]));
+				dude.setCourse8(Integer.parseInt(fields[13]));
 				
 				instructors.add(dude);
 			}
@@ -395,7 +415,7 @@ public class Worker {
 		}
 		Files.write(Paths.get("instructorList.txt"), text.toString().getBytes());
 		Files.write(Paths.get("instructors.tsv"), tsv.toString().getBytes());
-		System.out.println("Finished writing instructor data to file..."); //TODO to file
+		System.out.println("Finished writing instructor data to file..."); 
 	}
 	public static void writeCourses() throws IOException{
 		System.out.println("Writing course data to file...");
@@ -414,23 +434,43 @@ public class Worker {
 	public static int[] setCurrName(String currName) {
 		Worker.currName = currName;
 		
-		int[] indexes = new int[3];
+		int[] indexes = new int[8];
 		for(Instructor dude : instructors){
 			if(dude.getName().equals(currName)){
-				currRank1 = dude.getRank1() + "";
-				currRank2 = dude.getRank2() + "";
-				currRank3 = dude.getRank3() + "";
+				currCourse1 = dude.getCourse1() + "";
+				currCourse2 = dude.getCourse2() + "";
+				currCourse3 = dude.getCourse3() + "";
+				currCourse4 = dude.getCourse4() + "";
+				currCourse5 = dude.getCourse5() + "";
+				currCourse6 = dude.getCourse6() + "";
+				currCourse7 = dude.getCourse7() + "";
+				currCourse8 = dude.getCourse8() + "";
 				
 				String[] arr = coursesToArray();
 				for(int i=0; i<arr.length; i++){
-					if(arr[i].equals(currRank1)){
+					if(arr[i].equals(currCourse1)){
 						indexes[0] = i;
 					}
-					if(arr[i].equals(currRank2)){
+					if(arr[i].equals(currCourse2)){
 						indexes[1] = i;
 					}
-					if(arr[i].equals(currRank3)){
+					if(arr[i].equals(currCourse3)){
 						indexes[2] = i;
+					}
+					if(arr[i].equals(currCourse4)){
+						indexes[3] = i;
+					}
+					if(arr[i].equals(currCourse5)){
+						indexes[4] = i;
+					}
+					if(arr[i].equals(currCourse6)){
+						indexes[5] = i;
+					}
+					if(arr[i].equals(currCourse7)){
+						indexes[6] = i;
+					}
+					if(arr[i].equals(currCourse8)){
+						indexes[7] = i;
 					}
 				}
 				
@@ -441,17 +481,38 @@ public class Worker {
 		return indexes;
 	}
 
-	public static void setCurrRank1(String currRank1) {
-		Worker.currRank1 = currRank1;
+	public static void setCurrCourse1(String currCourse1) {
+		Worker.currCourse1 = currCourse1;
+	}
+	
+	public static void setCurrCourse2(String currCourse2) {
+		Worker.currCourse2 = currCourse2;
+	}
+	
+	public static void setCurrCourse3(String currCourse3) {
+		Worker.currCourse3 = currCourse3;
 	}
 
-	public static void setCurrRank2(String currRank2) {
-		Worker.currRank2 = currRank2;
+	public static void setCurrCourse4(String currCourse4) {
+		Worker.currCourse4 = currCourse4;
 	}
 
-	public static void setCurrRank3(String currRank3) {
-		Worker.currRank3 = currRank3;
+	public static void setCurrCourse5(String currCourse5) {
+		Worker.currCourse5 = currCourse5;
 	}
+
+	public static void setCurrCourse6(String currCourse6) {
+		Worker.currCourse6 = currCourse6;
+	}
+
+	public static void setCurrCourse7(String currCourse7) {
+		Worker.currCourse7 = currCourse7;
+	}
+
+	public static void setCurrCourse8(String currCourse8) {
+		Worker.currCourse8 = currCourse8;
+	}
+
 
 
 }
