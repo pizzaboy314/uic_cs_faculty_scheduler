@@ -77,7 +77,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		// create all components and add them
 		editorFrame = new JFrame("Faculty Editor");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
+		Dimension frameSize = new Dimension(640, (int) (screenSize.height / 2));
 		int x = (int) (frameSize.width / 2);
 		int y = (int) (frameSize.height / 2);
 		editorFrame.setBounds(x, y, frameSize.width, frameSize.height);
