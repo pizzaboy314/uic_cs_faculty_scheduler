@@ -3,14 +3,31 @@
 
 package data;
 
-import java.io.*;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+import java.io.PrintStream;
 
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
-	private JFrame frame;
+	private JFrame editorFrame;
+	private JFrame mainFrame;
 	private JTextArea textArea;
 	private Thread reader;
 	private Thread reader2;
@@ -19,17 +36,34 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	private final PipedInputStream pin = new PipedInputStream();
 	private final PipedInputStream pin2 = new PipedInputStream();
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public GUIapp() {
-		Worker.init(); 
-		
-		// create all components and add them
-		frame = new JFrame("UIC CS Faculty Editor");
+		mainWindow();
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public synchronized void mainWindow() {
+		Worker.init();
+
+		mainFrame = new JFrame("UIC CS Faculty Scheduler");
+		editorWindow();
+
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
 		int x = (int) (frameSize.width / 2);
 		int y = (int) (frameSize.height / 2);
-		frame.setBounds(x, y, frameSize.width, frameSize.height);
+		mainFrame.setBounds(x, y, frameSize.width, frameSize.height);
+
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public synchronized void editorWindow() {
+		// create all components and add them
+		editorFrame = new JFrame("Faculty Editor");
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
+		int x = (int) (frameSize.width / 2);
+		int y = (int) (frameSize.height / 2);
+		editorFrame.setBounds(x, y, frameSize.width, frameSize.height);
 
 		textArea = new JTextArea();
 		textArea.setEditable(false);
@@ -55,19 +89,19 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
         clearConsole.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		textArea.setText("");
-        		frame.repaint();
+        		editorFrame.repaint();
         	}
         });
         reloadInstructors.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		Worker.updateInstructors();
-        		frame.repaint();
+        		editorFrame.repaint();
         	}
         });
         reloadCourses.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		Worker.updateCourses();
-        		frame.repaint();
+        		editorFrame.repaint();
         	}
         });
         
@@ -220,15 +254,15 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		dropdowns.add(dropdowns2, BorderLayout.SOUTH);
 		
 		
-		frame.repaint();
-		frame.repaint();
-		frame.repaint();
+		editorFrame.repaint();
+		editorFrame.repaint();
+		editorFrame.repaint();
 
-		frame.getContentPane().add(new JScrollPane(textArea), BorderLayout.CENTER);
-		frame.getContentPane().add(dropdowns, BorderLayout.NORTH);
-		frame.getContentPane().add(controls, BorderLayout.SOUTH);
-		frame.setVisible(true);
-		frame.addWindowListener(this);
+		editorFrame.getContentPane().add(new JScrollPane(textArea), BorderLayout.CENTER);
+		editorFrame.getContentPane().add(dropdowns, BorderLayout.NORTH);
+		editorFrame.getContentPane().add(controls, BorderLayout.SOUTH);
+		editorFrame.setVisible(true);
+		// editorFrame.addWindowListener(this);
 
 		try {
 			PipedOutputStream pout = new PipedOutputStream(this.pin);
@@ -266,8 +300,6 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		reader2.setDaemon(true);
 		reader2.start();
 		
-		
-
 	}
 
 	public synchronized void windowClosed(WindowEvent evt) {
@@ -287,8 +319,8 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	}
 
 	public synchronized void windowClosing(WindowEvent evt) {
-		frame.setVisible(false); // default behaviour of JFrame
-		frame.dispose();
+		editorFrame.setVisible(false); // default behaviour of JFrame
+		editorFrame.dispose();
 	}
 
 	public synchronized void run() {
