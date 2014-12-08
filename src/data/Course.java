@@ -2,6 +2,7 @@ package data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Course implements Comparable<Course>{
 	
@@ -15,6 +16,13 @@ public class Course implements Comparable<Course>{
 		instructors = new ArrayList<Instructor>();
 	}
 	
+	public Instructor chooseInstructor() {
+		Random r = new Random(System.currentTimeMillis());
+		int i = r.nextInt(instructors.size());
+		Instructor dude = instructors.get(i);
+		return dude;
+	}
+
 	public void addInstructor(Instructor dude) {
 		if (hasInstructor(dude) == false) {
 			instructors.add(dude);
