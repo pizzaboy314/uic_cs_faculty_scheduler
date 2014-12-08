@@ -136,7 +136,7 @@ public class Worker {
 	}
 	
 	public static boolean checkInstructorTSV(){
-		File dataFile = new File("instructors.tsv");
+		File dataFile = new File("data/instructors.tsv");
 		
 		FileOutputStream oFile;
 		if (!dataFile.exists()) {
@@ -155,7 +155,7 @@ public class Worker {
 	}
 	
 	public static boolean checkCourseTSV(){
-		File dataFile2 = new File("courses.tsv");
+		File dataFile2 = new File("data/courses.tsv");
 		
 		FileOutputStream oFile;
 		if (!dataFile2.exists()) {
@@ -173,7 +173,7 @@ public class Worker {
 	}
 	
 	public static boolean checkInstructorListFile() {
-		File dataFile = new File("instructorList.txt");
+		File dataFile = new File("data/instructorList.txt");
 		FileOutputStream oFile;
 		if (!dataFile.exists()) {
 			try {
@@ -190,7 +190,7 @@ public class Worker {
 	}
 	
 	public static boolean checkCourseListFile(){
-		File dataFile2 = new File("courseList.txt");
+		File dataFile2 = new File("data/courseList.txt");
 		
 		FileOutputStream oFile;
 		if (!dataFile2.exists()) {
@@ -212,7 +212,7 @@ public class Worker {
 		InputStream fis;
 		BufferedReader br;
 		try {
-			fis = new FileInputStream("instructors.tsv");
+			fis = new FileInputStream("data/instructors.tsv");
 			br = new BufferedReader(new InputStreamReader(fis, Charset.forName("UTF-8")));
 			
 			while((line = br.readLine()) != null){
@@ -251,7 +251,7 @@ public class Worker {
 		InputStream fis;
 		BufferedReader br;
 		try {
-			fis = new FileInputStream("courses.tsv");
+			fis = new FileInputStream("data/courses.tsv");
 			br = new BufferedReader(new InputStreamReader(fis, Charset.forName("UTF-8")));
 			
 			while((line = br.readLine()) != null){
@@ -421,8 +421,8 @@ public class Worker {
 			text.append(dude.fileBlock() + "\n");
 			tsv.append(dude.tsvLine() + "\n");
 		}
-		Files.write(Paths.get("instructorList.txt"), text.toString().getBytes());
-		Files.write(Paths.get("instructors.tsv"), tsv.toString().getBytes());
+		Files.write(Paths.get("data/instructorList.txt"), text.toString().getBytes());
+		Files.write(Paths.get("data/instructors.tsv"), tsv.toString().getBytes());
 		System.out.println("Finished writing instructor data to file..."); 
 	}
 	public static void writeCourses() throws IOException{
@@ -434,8 +434,8 @@ public class Worker {
 			text.append(c.fileBlock() + "\n");
 			tsv.append(c.tsvLine() + "\n");
 		}
-		Files.write(Paths.get("courseList.txt"), text.toString().getBytes());
-		Files.write(Paths.get("courses.tsv"), tsv.toString().getBytes());
+		Files.write(Paths.get("data/courseList.txt"), text.toString().getBytes());
+		Files.write(Paths.get("data/courses.tsv"), tsv.toString().getBytes());
 		System.out.println("Finished writing course data to file...");
 	}
 
