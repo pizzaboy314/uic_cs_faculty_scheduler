@@ -1,16 +1,36 @@
 package data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course implements Comparable<Course>{
 	
 	private String name;
 	private int number;
 	private int underGradHours;
 	private int gradHours;
+	private List<Instructor> instructors;
 	
 	public Course(){
-		
+		instructors = new ArrayList<Instructor>();
 	}
 	
+	public void addInstructor(Instructor dude) {
+		if (hasInstructor(dude) == false) {
+			instructors.add(dude);
+		}
+	}
+
+	public boolean hasInstructor(Instructor dude) {
+		boolean b = false;
+		for (Instructor i : instructors) {
+			if (i.getName().equals(dude.getName())) {
+				b = true;
+			}
+		}
+		return b;
+	}
+
 	public String fileBlock(){
 		StringBuilder s = new StringBuilder();
 		s.append("CS " + number + ": ");
