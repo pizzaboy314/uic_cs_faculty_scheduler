@@ -37,7 +37,9 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	private final PipedInputStream pin2 = new PipedInputStream();
 
 	public GUIapp() {
+		textStreamInit();
 		mainWindow();
+		editorWindow();
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -45,7 +47,6 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		Worker.init();
 
 		mainFrame = new JFrame("UIC CS Faculty Scheduler");
-		editorWindow();
 
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
@@ -263,7 +264,11 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		editorFrame.getContentPane().add(controls, BorderLayout.SOUTH);
 		editorFrame.setVisible(true);
 		// editorFrame.addWindowListener(this);
+		Worker.initPrint();
 
+	}
+
+	public synchronized void textStreamInit() {
 		try {
 			PipedOutputStream pout = new PipedOutputStream(this.pin);
 			System.setOut(new PrintStream(pout, true));
@@ -286,7 +291,6 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 					+ se.getMessage());
 		}
 		
-		Worker.initPrint();
 
 		quit = false; // signals the Threads that they should exit
 
@@ -299,7 +303,6 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		reader2 = new Thread(this);
 		reader2.setDaemon(true);
 		reader2.start();
-		
 	}
 
 	public synchronized void windowClosed(WindowEvent evt) {
