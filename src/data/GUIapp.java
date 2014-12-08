@@ -54,6 +54,22 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		int y = (int) (frameSize.height / 2);
 		mainFrame.setBounds(x, y, frameSize.width, frameSize.height);
 
+		JButton loadEditor = new JButton("Faculty Editor");
+		loadEditor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				editorFrame.setVisible(true);
+				editorFrame.repaint();
+			}
+		});
+
+		JPanel controls = new JPanel();
+		controls.setLayout(new FlowLayout());
+		controls.add(loadEditor);
+
+		mainFrame.add(controls, BorderLayout.SOUTH);
+		mainFrame.addWindowListener(this);
+		mainFrame.setVisible(true);
+
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -262,8 +278,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		editorFrame.getContentPane().add(new JScrollPane(textArea), BorderLayout.CENTER);
 		editorFrame.getContentPane().add(dropdowns, BorderLayout.NORTH);
 		editorFrame.getContentPane().add(controls, BorderLayout.SOUTH);
-		editorFrame.setVisible(true);
-		// editorFrame.addWindowListener(this);
+		// editorFrame.setVisible(true);
 		Worker.initPrint();
 
 	}
@@ -322,8 +337,8 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	}
 
 	public synchronized void windowClosing(WindowEvent evt) {
-		editorFrame.setVisible(false); // default behaviour of JFrame
-		editorFrame.dispose();
+		mainFrame.setVisible(false); // default behavior of JFrame
+		mainFrame.dispose();
 	}
 
 	public synchronized void run() {
