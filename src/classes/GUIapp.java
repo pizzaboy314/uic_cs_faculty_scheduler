@@ -37,14 +37,14 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	private final PipedInputStream pin2 = new PipedInputStream();
 
 	public GUIapp() {
+		boolean showEditor = !Worker.init();
 		textStreamInit();
 		mainWindow();
-		editorWindow();
+		editorWindow(showEditor);
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public synchronized void mainWindow() {
-		Worker.init();
 
 		mainFrame = new JFrame("UIC CS Faculty Scheduler");
 
@@ -73,7 +73,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public synchronized void editorWindow() {
+	public synchronized void editorWindow(boolean show) {
 		// create all components and add them
 		editorFrame = new JFrame("Faculty Editor");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -278,7 +278,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		editorFrame.getContentPane().add(new JScrollPane(textArea), BorderLayout.CENTER);
 		editorFrame.getContentPane().add(dropdowns, BorderLayout.NORTH);
 		editorFrame.getContentPane().add(controls, BorderLayout.SOUTH);
-		// editorFrame.setVisible(true);
+		editorFrame.setVisible(show);
 		Worker.initPrint();
 
 	}

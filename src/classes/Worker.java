@@ -31,7 +31,9 @@ public class Worker {
 	public static String currCourse7;
 	public static String currCourse8;
 	
-	public static void init(){
+	public static boolean init() {
+		boolean hasDataFiles = true;
+
 		instructors = new ArrayList<Instructor>();
 		courses = new ArrayList<Course>();
 		currName = "";
@@ -46,16 +48,19 @@ public class Worker {
 		
 		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
 			updateInstructors();
+			hasDataFiles = false;
 		} else {
 			loadInstructors();
 		}
 		
 		if(checkCourseListFile() == false || checkCourseTSV() == false){
 			updateCourses();
+			hasDataFiles = false;
 		} else {
 			loadCourses();
 		}
 		
+		return hasDataFiles;
 	}
 	
 	public static void initPrint(){
