@@ -50,14 +50,13 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 	public GUIapp() {
 		boolean showEditor = !Worker.init();
-		// textStreamInit();
+		textStreamInit();
 		mainWindow();
 		editorWindow(showEditor);
 		resultWindow();
 	}
 
 	// TODO save dialog for text result
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public synchronized void mainWindow() {
 		mainFrame = new JFrame("UIC CS Faculty Scheduler");
 
@@ -94,7 +93,6 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public synchronized void resultWindow() {
 		resultFrame = new JFrame("Results");
 		File resultPath = new File(System.getProperty("user.dir"));
