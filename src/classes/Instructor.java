@@ -27,6 +27,17 @@ public class Instructor implements Comparable<Instructor>{
 		return name;
 	}
 
+	public boolean doesTeachCourse(Course c) {
+		boolean result = false;
+		int num = c.getNumber();
+
+		if (num == course1 || num == course2 || num == course3 || num == course4 || num == course5 || num == course6 || num == course7
+				|| num == course8) {
+			result = true;
+		}
+		return result;
+	}
+
 	public void setName(String name) {
 		String[] split = name.split(" "); 
 		
