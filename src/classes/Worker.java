@@ -80,6 +80,17 @@ public class Worker {
 		}
 	}
 	
+	public String chooseInstructors(List<Course> offered) {
+		StringBuilder sb = new StringBuilder();
+		for (Course c : offered) {
+			if (c.getNumber() != 99) {
+				sb.append("CS " + c.getNumber() + ":" + c.chooseInstructor().getName() + "\n");
+			}
+		}
+
+		return sb.toString();
+	}
+
 	public static String[] instructorsToArray(){
 		String[] arr = new String[instructors.size()];
 		int i = 0;
