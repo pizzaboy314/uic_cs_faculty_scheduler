@@ -80,11 +80,11 @@ public class Worker {
 		}
 	}
 	
-	public String chooseInstructors(List<Course> offered) {
+	public static String chooseInstructors(List<Course> offered) {
 		StringBuilder sb = new StringBuilder();
 		for (Course c : offered) {
 			if (c.getNumber() != 99) {
-				sb.append("CS " + c.getNumber() + ":" + c.chooseInstructor().getName() + "\n");
+				sb.append("CS " + c.getNumber() + ": " + c.chooseInstructor().getName() + "\n");
 			}
 		}
 
