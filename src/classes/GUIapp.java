@@ -28,7 +28,9 @@ import javax.swing.JTextArea;
 public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	private JFrame editorFrame;
 	private JFrame mainFrame;
+	private JFrame resultFrame;
 	private JTextArea textArea;
+	private JTextArea resultText;
 	private Thread reader;
 	private Thread reader2;
 	private boolean quit;
@@ -38,14 +40,14 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 	public GUIapp() {
 		boolean showEditor = !Worker.init();
-		textStreamInit();
+		// textStreamInit();
 		mainWindow();
 		editorWindow(showEditor);
+		resultWindow();
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public synchronized void mainWindow() {
-
 		mainFrame = new JFrame("UIC CS Faculty Scheduler");
 
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -61,15 +63,40 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 				editorFrame.repaint();
 			}
 		});
+		JButton loadResults = new JButton("Generate Instructors");
+		loadResults.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				resultText.append(Worker.chooseInstructors(Worker.courses));
+				resultFrame.setVisible(true);
+			}
+		});
 
 		JPanel controls = new JPanel();
 		controls.setLayout(new FlowLayout());
 		controls.add(loadEditor);
+		controls.add(loadResults);
 
 		mainFrame.add(controls, BorderLayout.SOUTH);
 		mainFrame.addWindowListener(this);
 		mainFrame.setVisible(true);
 
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public synchronized void resultWindow() {
+		resultFrame = new JFrame("Results");
+
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
+		int x = (int) (frameSize.width / 2);
+		int y = (int) (frameSize.height / 2);
+		resultFrame.setBounds(x, y, frameSize.width, frameSize.height);
+
+		resultText = new JTextArea();
+		resultText.setText("");
+		resultText.setEditable(false);
+
+		resultFrame.getContentPane().add(new JScrollPane(resultText), BorderLayout.CENTER);
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
