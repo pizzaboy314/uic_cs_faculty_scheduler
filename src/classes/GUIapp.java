@@ -12,28 +12,38 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.File;
 import java.io.IOException;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	private JFrame editorFrame;
 	private JFrame mainFrame;
-	private JFrame resultFrame;
 	private JTextArea textArea;
-	private JTextArea resultText;
 	private Thread reader;
 	private Thread reader2;
 	private boolean quit;
+
+	private JFrame resultFrame;
+	private JTextArea resultText;
+	private String resultString;
+	private File resultFile;
+	private JFileChooser fc;
 
 	private final PipedInputStream pin = new PipedInputStream();
 	private final PipedInputStream pin2 = new PipedInputStream();
@@ -46,6 +56,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		resultWindow();
 	}
 
+	// TODO save dialog for text result
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public synchronized void mainWindow() {
 		mainFrame = new JFrame("UIC CS Faculty Scheduler");
@@ -66,7 +77,8 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		JButton loadResults = new JButton("Generate Instructors");
 		loadResults.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				resultText.append(Worker.chooseInstructors(Worker.courses));
+				resultString = Worker.chooseInstructors(Worker.courses);
+				resultText.setText(resultString);
 				resultFrame.setVisible(true);
 			}
 		});
@@ -85,6 +97,12 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public synchronized void resultWindow() {
 		resultFrame = new JFrame("Results");
+		File resultPath = new File(System.getProperty("user.dir"));
+		fc = new JFileChooser(resultPath);
+
+		FileFilter filter = new FileNameExtensionFilter("Text file (*.txt)", "txt");
+		fc.addChoosableFileFilter(filter);
+		fc.setFileFilter(filter);
 
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
@@ -96,7 +114,35 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		resultText.setText("");
 		resultText.setEditable(false);
 
+		JButton saveFile = new JButton("Save Results");
+		saveFile.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int returnVal = fc.showSaveDialog(null);
+				if (returnVal == JFileChooser.APPROVE_OPTION) {
+					File f = fc.getSelectedFile();
+					String filepath = f.getAbsolutePath();
+					String filename = f.getName();
+
+					if (!filename.contains(".txt")) {
+						resultFile = new File(filepath + ".txt");
+					} else {
+						resultFile = f;
+					}
+
+					try {
+						Files.write(Paths.get(resultFile.getAbsolutePath()), resultString.getBytes());
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+				}
+			}
+		});
+		JPanel controls = new JPanel();
+		controls.setLayout(new FlowLayout());
+		controls.add(saveFile);
+
 		resultFrame.getContentPane().add(new JScrollPane(resultText), BorderLayout.CENTER);
+		resultFrame.getContentPane().add(controls, BorderLayout.SOUTH);
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
