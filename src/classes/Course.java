@@ -17,9 +17,15 @@ public class Course implements Comparable<Course>{
 	}
 	
 	public Instructor chooseInstructor() {
-		Random r = new Random(System.currentTimeMillis());
-		int i = r.nextInt(instructors.size());
-		Instructor dude = instructors.get(i);
+		Instructor dude;
+		if (instructors.size() > 0) {
+			Random r = new Random(System.currentTimeMillis());
+			int i = r.nextInt(instructors.size());
+			dude = instructors.get(i);
+		} else {
+			dude = new Instructor();
+			dude.setName("N/A");
+		}
 		return dude;
 	}
 
