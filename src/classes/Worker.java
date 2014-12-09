@@ -103,14 +103,30 @@ public class Worker {
 	public static void saveInfo(){
 		for(Instructor dude : instructors){
 			if(dude.getName().equals(currName)){
-				dude.setCourse1((!currCourse1.equals("n/a")) ? Integer.parseInt(currCourse1) : 99);
-				dude.setCourse2((!currCourse2.equals("n/a")) ? Integer.parseInt(currCourse2) : 99);
-				dude.setCourse3((!currCourse3.equals("n/a")) ? Integer.parseInt(currCourse3) : 99);
-				dude.setCourse4((!currCourse4.equals("n/a")) ? Integer.parseInt(currCourse4) : 99);
-				dude.setCourse5((!currCourse5.equals("n/a")) ? Integer.parseInt(currCourse5) : 99);
-				dude.setCourse6((!currCourse6.equals("n/a")) ? Integer.parseInt(currCourse6) : 99);
-				dude.setCourse7((!currCourse7.equals("n/a")) ? Integer.parseInt(currCourse7) : 99);
-				dude.setCourse8((!currCourse8.equals("n/a")) ? Integer.parseInt(currCourse8) : 99);
+				int course1 = (!currCourse1.equals("n/a")) ? Integer.parseInt(currCourse1) : 99;
+				int course2 = (!currCourse2.equals("n/a")) ? Integer.parseInt(currCourse2) : 99;
+				int course3 = (!currCourse3.equals("n/a")) ? Integer.parseInt(currCourse3) : 99;
+				int course4 = (!currCourse4.equals("n/a")) ? Integer.parseInt(currCourse4) : 99;
+				int course5 = (!currCourse5.equals("n/a")) ? Integer.parseInt(currCourse5) : 99;
+				int course6 = (!currCourse6.equals("n/a")) ? Integer.parseInt(currCourse6) : 99;
+				int course7 = (!currCourse7.equals("n/a")) ? Integer.parseInt(currCourse7) : 99;
+				int course8 = (!currCourse8.equals("n/a")) ? Integer.parseInt(currCourse8) : 99;
+				dude.setCourse1(course1);
+				dude.setCourse2(course2);
+				dude.setCourse3(course3);
+				dude.setCourse4(course4);
+				dude.setCourse5(course5);
+				dude.setCourse6(course6);
+				dude.setCourse7(course7);
+				dude.setCourse8(course8);
+
+				for (Course c : courses) {
+					int num = c.getNumber();
+					if (num == course1 || num == course2 || num == course3 || num == course4 || num == course5 || num == course6 || num == course7
+							|| num == course8) {
+						c.addInstructor(dude);
+					}
+				}
 			}
 		}
 		try {
@@ -212,7 +228,7 @@ public class Worker {
 		}
 	}
 	
-	public static void loadInstructors(){
+	public static void loadInstructors() {
 		String line;
 		InputStream fis;
 		BufferedReader br;
@@ -268,6 +284,11 @@ public class Worker {
 				c.setUnderGradHours(Integer.parseInt(fields[2]));
 				c.setGradHours(Integer.parseInt(fields[3]));
 				
+				for (Instructor dude : instructors) {
+					if (dude.doesTeachCourse(c)) {
+						c.addInstructor(dude);
+					}
+				}
 				courses.add(c);
 			}
 			Collections.sort(courses);
