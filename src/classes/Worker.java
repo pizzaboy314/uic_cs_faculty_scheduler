@@ -31,6 +31,14 @@ public class Worker {
 	public static String currCourse7;
 	public static String currCourse8;
 	
+	/*
+	 * Initializes global variables and checks to see if the main data files are
+	 * in existence. If not, it creates the files and does a fresh download on
+	 * the data from the web page.
+	 * 
+	 * @return a boolean (true by default) indicating whether or not there were
+	 * missing data files
+	 */
 	public static boolean init() {
 		boolean hasDataFiles = true;
 
