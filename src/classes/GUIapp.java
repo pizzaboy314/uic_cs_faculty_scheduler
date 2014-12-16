@@ -31,23 +31,78 @@ import javax.swing.JTextArea;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+/**
+ * Contains all GUI elements and calls the functions in the Worker class as
+ * needed.
+ * 
+ * Taken from: http://www.comweb.nl/java/Console/Console.html and adapted for
+ * use with this application by Bryan Spahr.
+ * 
+ * @author bryan
+ *
+ */
 public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
+	/**
+	 * Popup frame that can be opened to edit faculty info.
+	 */
 	private JFrame editorFrame;
+	/**
+	 * Main GUI window with buttons.
+	 */
 	private JFrame mainFrame;
+	/**
+	 * Recipient of sysout print statements in the editor window.
+	 */
 	private JTextArea textArea;
+	/**
+	 * For capturing the text stream from sysout.
+	 */
 	private Thread reader;
+	/**
+	 * For capturing the text stream from sysout.
+	 */
 	private Thread reader2;
+	/**
+	 * Used for properly closing threads when the application is terminated. I
+	 * think.
+	 */
 	private boolean quit;
 
+	/**
+	 * Display window for showing calculated results.
+	 */
 	private JFrame resultFrame;
+	/**
+	 * For displaying the results text to the user.
+	 */
 	private JTextArea resultText;
+	/**
+	 * For storing the result string as a field in this class. In case it's
+	 * needed later.
+	 */
 	private String resultString;
+	/**
+	 * File pointer for saving the results to a plaintext file.
+	 */
 	private File resultFile;
+	/**
+	 * Save dialog for saving the results to a plaintext file.
+	 */
 	private JFileChooser fc;
 
+	/**
+	 * For piping sysout text to the editor window.
+	 */
 	private final PipedInputStream pin = new PipedInputStream();
+	/**
+	 * For piping sysout text to the editor window.
+	 */
 	private final PipedInputStream pin2 = new PipedInputStream();
 
+	/**
+	 * Creates a new instance of GUIapp (duh), also calls the Worker class's
+	 * init method and all GUI methods and init functions in this class.
+	 */
 	public GUIapp() {
 		boolean showEditor = !Worker.init();
 		textStreamInit();
@@ -56,7 +111,10 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		resultWindow();
 	}
 
-	// TODO save dialog for text result
+	/**
+	 * Creates and shows the main GUI window, including all Swing elements.
+	 * Closing this windows is the only way to exit the application.
+	 */
 	public synchronized void mainWindow() {
 		mainFrame = new JFrame("UIC CS Faculty Scheduler");
 
@@ -93,6 +151,9 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 	}
 
+	/**
+	 * Creates the window for results but doesn't show it.
+	 */
 	public synchronized void resultWindow() {
 		resultFrame = new JFrame("Results");
 		File resultPath = new File(System.getProperty("user.dir"));
@@ -143,6 +204,13 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		resultFrame.getContentPane().add(controls, BorderLayout.SOUTH);
 	}
 
+	/**
+	 * Creates the editor window with all swing elements.
+	 * 
+	 * @param show
+	 *            Indicates whether or not the editor window should be shown at
+	 *            the start.
+	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public synchronized void editorWindow(boolean show) {
 		// create all components and add them
@@ -354,6 +422,10 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 	}
 
+	/**
+	 * Taken from the example code referenced above. Evidently it sets up the
+	 * text piping from sysout to the text area in the editor window.
+	 */
 	public synchronized void textStreamInit() {
 		try {
 			PipedOutputStream pout = new PipedOutputStream(this.pin);
@@ -391,6 +463,11 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		reader2.start();
 	}
 
+	/**
+	 * Standard JSwing event method. When the GUI window is closed, all threads
+	 * are closed safely. Only the main window uses this method, so that only
+	 * closing the main window closes the application.
+	 */
 	public synchronized void windowClosed(WindowEvent evt) {
 		quit = true;
 		this.notifyAll(); // stop all threads
@@ -407,11 +484,18 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		System.exit(0);
 	}
 
+	/**
+	 * No idea what this does. Google it.
+	 */
 	public synchronized void windowClosing(WindowEvent evt) {
 		mainFrame.setVisible(false); // default behavior of JFrame
 		mainFrame.dispose();
 	}
 
+	/**
+	 * Standard threaded GUI method. Here it's used to manage the sysout text
+	 * threads.
+	 */
 	public synchronized void run() {
 		try {
 			while (Thread.currentThread() == reader) {
@@ -446,6 +530,16 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 	}
 
+	/**
+	 * Threading manager for sysout piping from aforementioned example code. No,
+	 * I don't know what it does.
+	 * 
+	 * @param in
+	 *            A PipedInputStream, duh
+	 * @return some sort of string obviously
+	 * @throws IOException
+	 *             if there's an IOException, why do I have to describe this
+	 */
 	public synchronized String readLine(PipedInputStream in) throws IOException {
 		String input = "";
 		do {

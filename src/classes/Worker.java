@@ -17,18 +17,60 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * A static class that does all the work through static methods. Contains and
+ * manages the data.
+ * 
+ * @author bryan
+ *
+ */
 public class Worker {
 	
+	/**
+	 * An ArrayList of instructors that will hold live data while the
+	 * application is running.
+	 */
 	public static List<Instructor> instructors;
+	/**
+	 * An ArrayList of courses that will hold live data while the application is
+	 * running.
+	 */
 	public static List<Course> courses;
+	/**
+	 * Holds the currently selected instructor in the GUI dropdown.
+	 */
 	public static String currName;
+	/**
+	 * Holds the currently selected course in the corresponding GUI dropdown.
+	 */
 	public static String currCourse1;
+	/**
+	 * Holds the currently selected course in the corresponding GUI dropdown.
+	 */
 	public static String currCourse2;
+	/**
+	 * Holds the currently selected course in the corresponding GUI dropdown.
+	 */
 	public static String currCourse3;
+	/**
+	 * Holds the currently selected course in the corresponding GUI dropdown.
+	 */
 	public static String currCourse4;
+	/**
+	 * Holds the currently selected course in the corresponding GUI dropdown.
+	 */
 	public static String currCourse5;
+	/**
+	 * Holds the currently selected course in the corresponding GUI dropdown.
+	 */
 	public static String currCourse6;
+	/**
+	 * Holds the currently selected course in the corresponding GUI dropdown.
+	 */
 	public static String currCourse7;
+	/**
+	 * Holds the currently selected course in the corresponding GUI dropdown.
+	 */
 	public static String currCourse8;
 	
 	/**
@@ -71,6 +113,10 @@ public class Worker {
 		return hasDataFiles;
 	}
 	
+	/**
+	 * Prints initial statements about the tool and what's happening. Gets
+	 * called as soon as the GUI is loaded.
+	 */
 	public static void initPrint(){
 		System.out.println("Use this tool to edit the courses each instructor teaches...\n");
 		if(checkInstructorListFile() == false || checkInstructorTSV() == false){
@@ -88,6 +134,13 @@ public class Worker {
 		}
 	}
 	
+	/**
+	 * Generates a selection of instructors for the following semester.
+	 * 
+	 * @param offered
+	 *            A list of courses for which instructors should be scheduled.
+	 * @return A string representing the printout of the scheduler.
+	 */
 	public static String chooseInstructors(List<Course> offered) {
 		StringBuilder sb = new StringBuilder();
 		for (Course c : offered) {
@@ -99,6 +152,12 @@ public class Worker {
 		return sb.toString();
 	}
 
+	/**
+	 * Takes the main data list of instructors and returns a string array of
+	 * their names. For populating JComboBox dropdown menus.
+	 * 
+	 * @return A string array of instructor names.
+	 */
 	public static String[] instructorsToArray(){
 		String[] arr = new String[instructors.size()];
 		int i = 0;
@@ -109,6 +168,12 @@ public class Worker {
 		return arr;
 	}
 	
+	/**
+	 * Takes the main data list of courses and returns a string array of their
+	 * course numbers. For populating JComboBox dropdown menus.
+	 * 
+	 * @return A string array of course numbers.
+	 */
 	public static String[] coursesToArray(){
 		String[] arr = new String[courses.size()];
 		int i = 0;
@@ -119,6 +184,10 @@ public class Worker {
 		return arr;
 	}
 	
+	/**
+	 * Saves the courses for the currently selected instructor in the GUI
+	 * dropdown and updates the data file.
+	 */
 	public static void saveInfo(){
 		for(Instructor dude : instructors){
 			if(dude.getName().equals(currName)){
@@ -155,6 +224,10 @@ public class Worker {
 		}
 	}
 	
+	/**
+	 * Redownloads instructor information from the web page and updates the data
+	 * file.
+	 */
 	public static void updateInstructors(){
 		try {
 			downloadAndParseInstructors();
@@ -165,6 +238,10 @@ public class Worker {
 		}
 	}
 	
+	/**
+	 * Redownloads course information from the web page and updates the data
+	 * file.
+	 */
 	public static void updateCourses(){
 		try {
 			downloadAndParseCourses();
@@ -175,6 +252,12 @@ public class Worker {
 		}
 	}
 	
+	/**
+	 * Checks that the instructor TSV data file exists. Also makes sure the data
+	 * directory exists.
+	 * 
+	 * @return A boolean indicating whether or not the file existed.
+	 */
 	public static boolean checkInstructorTSV(){
 		File dataPath = new File(System.getProperty("user.dir") + File.separator + "data");
 		File dataFile = new File(System.getProperty("user.dir") + File.separator + "data" + File.separator + "instructors.tsv");
@@ -198,6 +281,12 @@ public class Worker {
 		
 	}
 	
+	/**
+	 * Checks that the course TSV data file exists. Also makes sure the data
+	 * directory exists.
+	 * 
+	 * @return A boolean indicating whether or not the file existed.
+	 */
 	public static boolean checkCourseTSV(){
 		File dataPath = new File(System.getProperty("user.dir") + File.separator + "data");
 		File dataFile = new File(System.getProperty("user.dir") + File.separator + "data" + File.separator + "courses.tsv");
@@ -220,6 +309,12 @@ public class Worker {
 		}
 	}
 	
+	/**
+	 * Checks that the user-friendly instructor data file exists. Also makes
+	 * sure the data directory exists.
+	 * 
+	 * @return A boolean indicating whether or not the file existed.
+	 */
 	public static boolean checkInstructorListFile() {
 		File dataPath = new File(System.getProperty("user.dir") + File.separator + "data");
 		File dataFile = new File(System.getProperty("user.dir") + File.separator + "data" + File.separator + "instructorList.txt");
@@ -242,6 +337,12 @@ public class Worker {
 		}
 	}
 	
+	/**
+	 * Checks that the user-friendly course data file exists. Also makes sure
+	 * the data directory exists.
+	 * 
+	 * @return A boolean indicating whether or not the file existed.
+	 */
 	public static boolean checkCourseListFile(){
 		File dataPath = new File(System.getProperty("user.dir") + File.separator + "data");
 		File dataFile = new File(System.getProperty("user.dir") + File.separator + "data" + File.separator + "courseList.txt");
@@ -264,6 +365,9 @@ public class Worker {
 		}
 	}
 	
+	/**
+	 * Loads instructor data from data file.
+	 */
 	public static void loadInstructors() {
 		String line;
 		InputStream fis;
@@ -303,6 +407,10 @@ public class Worker {
 		}
 		
 	}
+
+	/**
+	 * Loads course data from data file.
+	 */
 	public static void loadCourses(){
 		String line;
 		InputStream fis;
@@ -338,7 +446,13 @@ public class Worker {
 		
 	}
 	
-
+	/**
+	 * Parses through the UIC CS Faculty web page and grabs useful instructor
+	 * data. Populates the main data ArrayList of instructors in this class.
+	 * 
+	 * @throws IOException
+	 *             In case a connection cannot be made.
+	 */
 	public static void downloadAndParseInstructors() throws IOException {
 		instructors = new ArrayList<Instructor>();
 		
@@ -406,6 +520,14 @@ public class Worker {
 
 		Collections.sort(instructors);
 	}
+
+	/**
+	 * Parses through the CS course web page and grabs useful course data.
+	 * Populates the main data ArrayList of courses in this class.
+	 * 
+	 * @throws IOException
+	 *             In case a connection cannot be made.
+	 */
 	public static void downloadAndParseCourses() throws IOException {
 		courses = new ArrayList<Course>();
 		
@@ -474,6 +596,13 @@ public class Worker {
 		Collections.sort(courses);
 	}
 	
+	/**
+	 * Writes the data from the main instructor ArrayList field to the data
+	 * files.
+	 * 
+	 * @throws IOException
+	 *             If for some reason the files don't exist.
+	 */
 	public static void writeInstructors() throws IOException{
 		System.out.println("Writing instructor data to file...");
 		
@@ -489,6 +618,13 @@ public class Worker {
 				.getBytes());
 		System.out.println("Finished writing instructor data to file..."); 
 	}
+
+	/**
+	 * Writes the data from the main course ArrayList field to the data files.
+	 * 
+	 * @throws IOException
+	 *             If for some reason the files don't exist.
+	 */
 	public static void writeCourses() throws IOException{
 		System.out.println("Writing course data to file...");
 		
@@ -504,6 +640,16 @@ public class Worker {
 		System.out.println("Finished writing course data to file...");
 	}
 
+	/**
+	 * Setter for field currName. In addition to setting the value, this
+	 * function also looks up all associated courses for said instructor so the
+	 * GUI dropdowns can be automatically populated.
+	 * 
+	 * @param currName
+	 *            A string to be set as the current instructor name.
+	 * @return An int array containing the indices of course numbers that should
+	 *         be selected in each GUI dropdown for courses.
+	 */
 	public static int[] setCurrName(String currName) {
 		Worker.currName = currName;
 		
@@ -554,34 +700,82 @@ public class Worker {
 		return indexes;
 	}
 
+	/**
+	 * Setter for field currCourse1.
+	 * 
+	 * @param currCourse1
+	 *            A string to be set as the current course 1.
+	 */
 	public static void setCurrCourse1(String currCourse1) {
 		Worker.currCourse1 = currCourse1;
 	}
 	
+	/**
+	 * Setter for field currCourse2.
+	 * 
+	 * @param currCourse2
+	 *            A string to be set as the current course 2.
+	 */
 	public static void setCurrCourse2(String currCourse2) {
 		Worker.currCourse2 = currCourse2;
 	}
 	
+	/**
+	 * Setter for field currCourse3.
+	 * 
+	 * @param currCourse3
+	 *            A string to be set as the current course 3.
+	 */
 	public static void setCurrCourse3(String currCourse3) {
 		Worker.currCourse3 = currCourse3;
 	}
 
+	/**
+	 * Setter for field currCourse4.
+	 * 
+	 * @param currCourse4
+	 *            A string to be set as the current course 4.
+	 */
 	public static void setCurrCourse4(String currCourse4) {
 		Worker.currCourse4 = currCourse4;
 	}
 
+	/**
+	 * Setter for field currCourse5.
+	 * 
+	 * @param currCourse5
+	 *            A string to be set as the current course 5.
+	 */
 	public static void setCurrCourse5(String currCourse5) {
 		Worker.currCourse5 = currCourse5;
 	}
 
+	/**
+	 * Setter for field currCourse6.
+	 * 
+	 * @param currCourse6
+	 *            A string to be set as the current course 6.
+	 */
 	public static void setCurrCourse6(String currCourse6) {
 		Worker.currCourse6 = currCourse6;
 	}
 
+	/**
+	 * Setter for field currCourse7.
+	 * 
+	 * @param currCourse7
+	 *            A string to be set as the current course 7.
+	 */
 	public static void setCurrCourse7(String currCourse7) {
 		Worker.currCourse7 = currCourse7;
 	}
 
+	/**
+	 * Setter for field currCourse8.
+	 * 
+	 * @param currCourse8
+	 *            A string to be set as the current course 8.
+	 */
 	public static void setCurrCourse8(String currCourse8) {
 		Worker.currCourse8 = currCourse8;
 	}
