@@ -5,9 +5,9 @@ CS 398: Undergraduate Research at UIC and also as the brainchild
 of Pat Troy, the professor under which this project was assigned
 and completed.
 
-Professor Troy is in charge of choosing which professors teach each 
+Professor Troy is in charge of choosing which CS professors teach each 
 class every semester for the following semester. As such, he suggested
-this project present a potentially viable solution to this manual task
+this project as a potentially viable solution to this manual task
 by choosing professors using a GUI application. 
 
 The above application does just that. Also included is a GUI editor 
