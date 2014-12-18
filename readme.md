@@ -18,12 +18,3 @@ and professional object oriented design throughout code.
 To run: Download final.zip above and extract the files 
 (the JAR file and the data folder need to be in the same directory).
 You'll also need Java Runtime to execute the JAR file.
-
-
-------------------------------------------
-
-Concerning data files: a course listing of "99" under a 
-certain instructor indicates NONE for that class spot. 
-If an instructor only teaches 3 classes, those classes
-should be assigned to the class1, class2, and class3 spots, 
-leaving "99" as a placeholder for the other 5 spots.
