@@ -120,9 +120,9 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
-		int x = (int) (frameSize.width / 2);
-		int y = (int) (frameSize.height / 2);
-		mainFrame.setBounds(x, y, frameSize.width, frameSize.height);
+		int x = (int) (frameSize.width - 150);
+		int y = (int) (frameSize.height - 75);
+		mainFrame.setBounds(x, y, 300, 75);
 
 		JButton loadEditor = new JButton("Faculty Editor");
 		loadEditor.addActionListener(new ActionListener() {
@@ -167,7 +167,7 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
 		int x = (int) (frameSize.width / 2);
 		int y = (int) (frameSize.height / 2);
-		resultFrame.setBounds(x, y, frameSize.width, frameSize.height);
+		resultFrame.setBounds(x, y, 400, frameSize.height);
 
 		resultText = new JTextArea();
 		resultText.setText("");
@@ -216,10 +216,10 @@ public class GUIapp extends WindowAdapter implements WindowListener, Runnable {
 		// create all components and add them
 		editorFrame = new JFrame("Faculty Editor");
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		Dimension frameSize = new Dimension(640, (int) (screenSize.height / 2));
-		int x = (int) (frameSize.width / 2);
-		int y = (int) (frameSize.height / 2);
-		editorFrame.setBounds(x, y, frameSize.width, frameSize.height);
+		Dimension frameSize = new Dimension((int) (screenSize.width / 2), (int) (screenSize.height / 2));
+		int x = (int) (frameSize.width - 320);
+		int y = (int) (frameSize.height - 200);
+		editorFrame.setBounds(x, y, 640, 300);
 
 		textArea = new JTextArea();
 		textArea.setEditable(false);
