@@ -20,3 +20,4 @@ To run: Download final.zip above and extract the files
 You'll also need Java Runtime to execute the JAR file.
 
 Complete API at: http://pizzaboy314.github.io/
+Project paper: http://bit.ly/1Agb66o
